@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Union
+
+    def is_prime(n: int) -> bool:
+        if n < 2:
+            return False
+        for i in range(2, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    def words_in_sentence(sentence: Union[str, List[str]]) -> str:
+        if isinstance(sentence, str):
+            sentence = sentence.split()
+        result = [word for word in sentence if is_prime(len(word))]
+        return " ".join(result)

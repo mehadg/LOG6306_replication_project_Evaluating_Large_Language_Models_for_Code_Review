@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def decimal_to_binary(decimal):
+        binary = bin(decimal)[2:] # remove the "0b" prefix added by the bin() function
+        return binary if len(binary) % 4 == 0 else binary + '0'*(4 - (len(binary) % 4))

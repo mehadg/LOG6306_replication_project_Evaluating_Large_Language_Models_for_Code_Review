@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def will_it_fly(q, w):
+        from typing import List
+        if not isinstance(q, List):
+            return False
+        q = list(reversed(q))
+        if q != q[::-1]:
+            return False
+        return sum(q) <= w

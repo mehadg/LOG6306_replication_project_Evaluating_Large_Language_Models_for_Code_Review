@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def choose_num(x, y):
+        if x <= y and (y % 2 == 0 or x != y):
+            return y if y % 2 == 0 else y - 1
+        return -1

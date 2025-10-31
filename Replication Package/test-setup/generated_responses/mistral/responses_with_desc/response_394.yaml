@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def circular_shift(x, shift):
+        return str(x)[shift:] + str(x)[:shift] if shift < len(str(x)) else str(x)[-len(str(x)) - shift:] + str(x)[:-len(str(x))]

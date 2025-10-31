@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def is_sorted(lst):
+      if len(set(lst)) != len(lst):
+        return False
+      return all(lst[i-1] <= lst[i] for i in range(1, len(lst)))

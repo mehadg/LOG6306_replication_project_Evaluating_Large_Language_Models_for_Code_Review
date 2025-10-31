@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+        closest_pair = None
+        distance = None
+
+        for idx, elem in enumerate(numbers):
+            for idx2, elem2 in enumerate(numbers):
+                if idx != idx2:
+                    if distance is None or abs(elem - elem2) < distance:
+                        distance = abs(elem - elem2)
+                        closest_pair = tuple(sorted([elem, elem2]))
+
+        return closest_pair

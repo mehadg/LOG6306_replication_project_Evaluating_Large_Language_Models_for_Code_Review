@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_nested(s):
+      stack = []
+      for c in s:
+        if c == '[':
+          stack.append(c)
+        elif c == ']':
+          if not stack:
+            return False
+          stack.pop()
+      return bool(stack)

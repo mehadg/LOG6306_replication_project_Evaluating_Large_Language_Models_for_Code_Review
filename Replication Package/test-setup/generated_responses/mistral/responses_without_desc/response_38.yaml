@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sort_even(l: List[int]):
+        return sorted(l, key=lambda x: x if x % 2 == 0 else None)[::2]

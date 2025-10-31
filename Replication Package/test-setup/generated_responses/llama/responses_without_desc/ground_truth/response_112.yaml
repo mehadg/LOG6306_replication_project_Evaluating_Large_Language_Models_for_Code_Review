@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from collections import Counter
+    
+    def histogram(test):
+        dict1 = {}
+        list1 = test.split(" ")
+        
+        counts = Counter(list1)
+        
+        for item, count in counts.items():
+            if count > 0:
+                dict1[item] = count
+        
+        return dict1

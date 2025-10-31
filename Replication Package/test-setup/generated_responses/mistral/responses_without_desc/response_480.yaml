@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Union
+
+    def double_the_difference(lst: List[Union[int, float]]) -> int:
+        positive_odds = [n**2 for n in lst if isinstance(n, (int, float)) and n > 0 and n % 2 != 0]
+        return sum(positive_odds)

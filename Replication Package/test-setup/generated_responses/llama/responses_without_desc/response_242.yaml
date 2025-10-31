@@ -1,0 +1,9 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_cube(a):
+      return a == 0 or (a > 0 and round(a ** (1/3)) ** 3 == a) or (a < 0 and round(-a ** (1/3)) ** 3 == -a)

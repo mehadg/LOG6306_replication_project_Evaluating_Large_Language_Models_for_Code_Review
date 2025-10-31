@@ -1,0 +1,25 @@
+feedback:
+  classified_type: | 
+    Correct
+code:
+  complete_code: |
+    from heapq import heapify, heappop
+    def minPath(grid, k):
+        n = len(grid)
+        directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+        visited = [[False for _ in range(n)] for _ in range(n)]
+        heap = [(grid[0][0], 0, 0)]
+        heapify(heap)
+        while heap:
+            curr, x, y = heappop(heap)
+            if visited[x][y]:
+                continue
+            visited[x][y] = True
+            k -= 1
+            if k == 0:
+                return [curr]
+            for dx, dy in directions:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < n and 0 <= ny < n:
+                    heappush(heap, (grid[nx][ny], nx, ny))
+        return []

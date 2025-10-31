@@ -1,0 +1,25 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def monotonic(l: List[int]):
+        increasing = True
+        for i in range(1, len(l)):
+            if l[i] < l[i-1]:
+                increasing = False
+                break
+        else: # The 'else' clause checks if the loop finished without breaking
+            increasing = True
+
+        decreasing = True
+        for i in range(1, len(l)):
+            if l[i] > l[i-1]:
+                decreasing = False
+                break
+        else:
+            decreasing = True
+
+        return increasing or decreasing

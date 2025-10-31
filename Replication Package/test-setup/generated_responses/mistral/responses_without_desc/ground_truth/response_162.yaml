@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def solve(s):
+        new_str = list(s)
+        for i in range(len(new_str)):
+            if new_str[i].isalpha():
+                new_str[i] = new_str[i].swapcase()
+        return ''.join(new_str)

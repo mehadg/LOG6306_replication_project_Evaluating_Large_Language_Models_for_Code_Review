@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def change_base(x: int, base: int):
+        digits = [] 
+        while x > 0: 
+            digits.append(str(x % base)) 
+            x //= base 
+        return "".join(reversed(digits))

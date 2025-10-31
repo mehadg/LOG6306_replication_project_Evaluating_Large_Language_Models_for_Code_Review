@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encode(message):
+      return ''.join(c.upper() if c.isalpha() and c.lower() in 'aeiou' else c.lower() if c.isalpha() and c.lower() not in 'aeiou' else c for c in message)

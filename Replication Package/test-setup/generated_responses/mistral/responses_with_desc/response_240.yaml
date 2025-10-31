@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_multiply_prime(a):
+        return a > 5 and any(is_prime(i) for i in range(2, a + 1) if a % i == 0) and len({i for i in range(2, a + 1) if a % i == 0}) == 3

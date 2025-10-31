@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def search(lst: List[int]):
+        frequency = {num: lst.count(num) for num in lst}
+        for num in frequency:
+            if frequency[num] >= num and num > 0:
+                return num
+        return -1

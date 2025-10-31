@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_sorted(lst):
+      return all(i <= j for i, j in zip(lst, lst[1:]))

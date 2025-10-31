@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def cycpattern_check(a, b):
+        l = len(b)
+        pat = b * (l // len(b)) + b[:l % len(b)]
+        for i in range(len(a) - l + 1):
+            if a[i:i+l] == pat:
+                return True
+        return False

@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def triples_sum_to_zero(l: List[int]):
+        return any(sum(subset) == 0 for subset in combinations(l, 3))

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def prod_signs(arr):
+      if not arr: return None
+      signs = 1 if 0 in arr else (-1) ** len(list(filter(lambda x: x < 0, arr)))
+      return abs(sum(arr)) * signs

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def x_or_y(n, x, y):
+        if n < 2 or (2 <= n <= (int(n**0.5))**2 and n % int(n**0.5) == 0):
+            return y
+        else:
+            return x

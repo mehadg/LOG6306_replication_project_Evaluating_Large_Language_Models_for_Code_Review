@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import Union
+    from fractions import Fraction
+
+    def simplify(x: Union[str, Fraction], n: Union[str, Fraction]):
+        if isinstance(x, str) and isinstance(n, str):
+            x = Fraction(x)
+            n = Fraction(n)
+        result = x * n
+        if result.denominator == 1:
+            return True
+        else:
+            return False

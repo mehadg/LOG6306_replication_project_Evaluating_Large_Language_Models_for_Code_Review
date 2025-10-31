@@ -1,0 +1,26 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare_one(a, b):
+      try:
+          a = float(a.replace(",", "."))
+      except (ValueError, AttributeError):
+          pass
+      try:
+          b = float(b.replace(",", "."))
+      except (ValueError, AttributeError):
+          pass
+      
+      if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+          if a == b:
+              return None
+          elif a > b:
+              return a
+          else:
+              return b
+      else:
+          return a if a == b else max(a, b)

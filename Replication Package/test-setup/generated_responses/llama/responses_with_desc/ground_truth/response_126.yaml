@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def split_words(txt):
+      if " " in txt:
+        return txt.split()
+      elif "," in txt:
+        return txt.replace(',', ' ').split()
+      else:
+        result = [i for i in txt if i.islower() and ord(i)%2 == 0]
+        return len(result)

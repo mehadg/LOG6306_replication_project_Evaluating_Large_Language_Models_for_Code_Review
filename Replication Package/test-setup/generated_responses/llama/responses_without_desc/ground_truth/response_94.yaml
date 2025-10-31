@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encode(message):
+      vowels = "aeiouAEIOU"
+      message = message.swapcase()
+      return ''.join([i if i not in vowels else chr(ord(i) + 2) for i in message])

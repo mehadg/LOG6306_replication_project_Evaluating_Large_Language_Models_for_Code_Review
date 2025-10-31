@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def search(lst: List[int]) -> int:
+        counts = {}
+        for x in lst:
+            if x in counts:
+                counts[x] += 1
+            else:
+                counts[x] = 1
+        result = -1
+        for x in sorted(counts, key=counts.get, reverse=True):
+            if x <= counts[x]:
+                result = x
+        return result

@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_palindrome(string: str) -> bool:
+        if not string or len(string) == 1:
+            return True
+
+        beginning_of_suffix = 0
+        end_of_suffix = len(string) - 1
+
+        while beginning_of_suffix < end_of_suffix:
+            if string[beginning_of_suffix] != string[end_of_suffix]:
+                return False
+            beginning_of_suffix += 1
+            end_of_suffix -= 1
+
+        return True

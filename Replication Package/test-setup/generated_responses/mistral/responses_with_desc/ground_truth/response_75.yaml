@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def total_match(lst1, lst2):
+        total_length1 = sum(len(s) for s in lst1)
+        total_length2 = sum(len(s) for s in lst2)
+
+        if total_length1 < total_length2:
+            return lst1
+        elif total_length1 > total_length2:
+            return lst2
+        else:
+            return lst1 if lst1[0] < lst2[0] else lst2

@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def make_a_pile(n):
+        pile = []
+        level = 1
+        while len(pile) < n:
+            if level % 2 == 0:
+                next_stone = level + 1
+            else:
+                next_stone = level
+            pile.append(n - (level-1))
+            level += next_stone
+        return pile[::-1]

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def reverse_delete(s, c):
+        s = list(filter(lambda char: char not in c, s))
+        s = ''.join(s)
+        return (s, s == s[::-1])

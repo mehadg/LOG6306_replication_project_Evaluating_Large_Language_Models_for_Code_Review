@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_closest_vowel(word):
+        vowels = "aeiouAEIOU"
+        for i in range(len(word)-1, -1, -1):
+            if word[i] in vowels and (i == 0 or word[i-1] not in vowels):
+                return word[i]
+        return ""

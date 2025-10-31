@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def total_match(lst1: List[str], lst2: List[str]) -> List[str]:
+        return sorted([lst1, lst2], key=sum(map(len)), reverse=True)[0]

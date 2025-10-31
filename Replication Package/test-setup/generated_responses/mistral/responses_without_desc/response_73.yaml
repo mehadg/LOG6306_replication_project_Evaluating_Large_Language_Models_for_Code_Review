@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def will_it_fly(q: List[int], w: int) -> bool:
+        return q == q[::-1] and sum(q) <= w

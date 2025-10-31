@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encrypt(s):
+      def rotate(c):
+          if c.isalpha():
+              return chr((ord(c) - 97 + 4*2) % 26 + 97)
+          else:
+              return c
+
+      return ''.join(rotate(c) for c in s)

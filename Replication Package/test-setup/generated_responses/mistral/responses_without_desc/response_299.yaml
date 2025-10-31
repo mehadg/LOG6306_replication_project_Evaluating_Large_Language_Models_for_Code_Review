@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def check_if_last_char_is_a_letter(txt):
+        if not txt or (len(txt) > 1 and txt[-1] == " "):
+            return False
+        match = re.search(r'\b[A-Za-z]\b', txt[-1])
+        return bool(match)

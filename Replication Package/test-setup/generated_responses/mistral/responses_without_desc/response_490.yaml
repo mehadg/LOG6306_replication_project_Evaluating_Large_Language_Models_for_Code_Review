@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import StringIO
+    import string
+
+    def solve(s):
+        letters = set(string.ascii_letters)
+        contains_letters = False
+        output = StringIO()
+        for i in range(len(s)):
+            if s[i] in letters:
+                contains_letters = True
+                s = s[:i] + s[i].swapcase() + s[i+1:]
+                output.write(s)
+                break
+        else:
+            output.write(s[::-1])
+        return str(output.getvalue())

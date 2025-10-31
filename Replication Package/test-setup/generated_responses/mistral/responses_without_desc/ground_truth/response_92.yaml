@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def is_bored(sentences: List[str]):
+        return sum(1 for sentence in sentences if sentence.startswith('I ') and len(sentence) > 1)

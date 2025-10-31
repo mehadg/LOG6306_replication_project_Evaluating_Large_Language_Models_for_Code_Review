@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    def words_in_sentence(sentence: str) -> str:
+        for word in sentence.split():
+            if not is_prime(len(word)):
+                sentence = sentence.replace(word, "")
+        return sentence.strip()
+
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                return False
+        return True

@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def search(lst):
+      counts = {}
+      for x in lst:
+        if x in counts:
+          counts[x] += 1
+        else:
+          counts[x] = 1
+      result = -1
+      for x, count in sorted(counts.items(), reverse=True):
+        if x <= count:
+          result = x
+          break
+      return result

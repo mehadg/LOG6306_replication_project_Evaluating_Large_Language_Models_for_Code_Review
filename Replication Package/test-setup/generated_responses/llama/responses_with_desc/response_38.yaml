@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_even(l):
+      l_prime = l[:]
+      for i in range(0, len(l), 2):
+        l_prime[i:i+2] = sorted([l[i], l[i+1]])
+      return l_prime

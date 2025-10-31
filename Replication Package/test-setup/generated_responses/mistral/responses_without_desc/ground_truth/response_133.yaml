@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_nested(string):
+        opening_brackets, nesting_level = [], 0
+        for i in range(len(string)):
+            if string[i] == '[':
+                if nesting_level > 0:
+                    return False
+                opening_brackets.append(i)
+                nesting_level += 1
+            elif string[i] == ']':
+                nesting_level -= 1
+        return nesting_level > 0 and len(opening_brackets) >= nesting_level

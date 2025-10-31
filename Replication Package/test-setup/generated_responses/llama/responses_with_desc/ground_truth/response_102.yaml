@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def words_string(s):
+      if not s:
+        return []
+      return s.replace(",", " ").split()

@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Optional
+
+    def longest(strings: List[str]) -> Optional[str]:
+      if not strings:
+        return None
+
+      max_length = max(len(x) for x in strings)
+      return next((s for s in strings if len(s) == max_length), None)

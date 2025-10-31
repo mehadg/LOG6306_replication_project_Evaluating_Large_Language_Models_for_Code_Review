@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def exchange(lst1, lst2):
+        even_lst1 = [num for num in lst1 if num % 2 == 0]
+        odd_lst2 = [num for num in lst2 if num % 2 != 0]
+        return "YES" if len(even_lst1) + len(odd_lst2) >= len(lst1) else "NO"

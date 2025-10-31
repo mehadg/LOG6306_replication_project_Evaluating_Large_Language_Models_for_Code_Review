@@ -1,0 +1,11 @@
+feedback:
+  classified_type: Correct
+code:
+  complete_code: |
+    from string import ascii_letters as letters
+
+    def solve(s):
+        if any(c.lower() in letters for c in s):
+            return s.swapcase()
+        else:
+            return s[::-1]

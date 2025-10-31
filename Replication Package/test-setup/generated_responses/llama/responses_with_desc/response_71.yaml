@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def strange_sort_list(lst):
+      if not lst:
+        return []
+      sorted_lst = sorted(lst)
+      result = [x for x in sorted_lst[0::2]]
+      return result

@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        value = int(round(float(value), -1)) if '.' in value else int(value)
+        return max((n for n in range(min([value, 0]), max([value, 0])) if abs(n - value) <= abs(value - round(value))))

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def pairs_sum_to_zero(lst: List[int]):
+        return any(pair_sum == 0 for pair_sum in (x + y for x, y in zip(lst, lst[1:] + [lst[0]])) + (y - x for x, y in zip(lst, lst[1:]) if y is not None))

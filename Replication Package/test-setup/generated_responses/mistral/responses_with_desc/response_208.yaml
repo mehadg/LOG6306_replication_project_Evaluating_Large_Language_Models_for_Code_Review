@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def pairs_sum_to_zero(l: List[int]):
+        return any(pair == 0 for pair in zip(l, l[1:])) or any(pair == 0 for pair in zip(l, reversed(l[1:])))

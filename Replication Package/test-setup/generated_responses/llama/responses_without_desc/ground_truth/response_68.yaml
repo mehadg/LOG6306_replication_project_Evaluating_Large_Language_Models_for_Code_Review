@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, n):
+        lis = [int(i) for i in s.split(' ') if i.isdigit()]
+        return n - sum(lis)

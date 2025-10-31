@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def generate_integers(a, b):
+        if a > b:
+            return generate_integers(b, a)
+        result = []
+        for n in range(a, b+1):
+            if str(n).count('0') + str(n).count('2') + str(n).count('4') + str(n).count('6') + str(n).count('8') > 0:
+                result.append(n)
+        return sorted(result)

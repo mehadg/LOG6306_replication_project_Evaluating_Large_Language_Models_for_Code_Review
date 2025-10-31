@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+      if n % 2 != 0:
+        return False
+      even_nums = [i for i in range(2, n//2 + 1) if i % 2 == 0]
+      for r in range(len(even_nums)):
+        for c in range(r+1, len(even_nums)):
+          sum_even = sum(even_nums[r:c+1])
+          if sum_even == n:
+            return True
+      return False

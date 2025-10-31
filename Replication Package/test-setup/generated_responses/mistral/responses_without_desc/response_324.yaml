@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def eat(number: int, need: int, remaining: int) -> List[int]:
+        total = number + need
+        if total > remaining:
+            return [remaining, 0]
+        else:
+            return [total, remaining - total]

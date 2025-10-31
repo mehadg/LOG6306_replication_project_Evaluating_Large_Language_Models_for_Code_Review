@@ -1,0 +1,11 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def add_elements(arr: List, k: int) -> int:
+        return sum(int(str(elem)) for elem in arr[:k] if len(str(elem)) <= 2)

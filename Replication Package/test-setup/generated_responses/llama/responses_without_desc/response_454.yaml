@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    import re
+    
+    def split_words(txt):
+      if ' ' in txt or ',' in txt:
+        return txt.split() if ' ' in txt else txt.split(',')
+      else:
+        return len([x for x in txt if x.islower() and ord(x) % 2 != 0])

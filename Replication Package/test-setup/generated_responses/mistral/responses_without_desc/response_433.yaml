@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def unique_digits(numbers: List[int]) -> List[int]:
+        def has_even(num):
+            for digit in str(abs(num)):
+                if int(digit) % 2 == 0:
+                    return True
+            return False
+
+        return sorted([num for num in set(numbers) if not has_even(num)])

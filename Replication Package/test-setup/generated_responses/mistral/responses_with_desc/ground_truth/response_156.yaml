@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def even_odd_count(num):
+        abs_num = abs(num)
+        count_even = 0
+        count_odd = 0
+        while abs_num > 0:
+            digit = abs_num % 10
+            abs_num = abs_num // 10
+            if digit % 2 == 0:
+                count_even += 1
+            else:
+                count_odd += 1
+        return (count_even, count_odd)

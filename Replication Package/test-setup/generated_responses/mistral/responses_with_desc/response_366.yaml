@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_even(l: list) -> list:
+        return [i for i in l] if len(l) % 2 == 1 else [x[0] if j % 2 else sorted(x) for j, x in enumerate(zip(l, l[1::2]))]

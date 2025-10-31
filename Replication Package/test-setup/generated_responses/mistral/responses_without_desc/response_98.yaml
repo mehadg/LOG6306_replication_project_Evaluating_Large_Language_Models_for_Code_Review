@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def multiply(a, b):
+        return (a % 10 * b % 10) if isinstance(a, int) and isinstance(b, int) else "Error: Input must be integers."

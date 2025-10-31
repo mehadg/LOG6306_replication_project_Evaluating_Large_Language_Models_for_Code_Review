@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def modp(n, p):
+        ret = 1
+        n %= p
+        while n > 0:
+            ret = (ret * ret) % p
+            n -= 1
+        return ret

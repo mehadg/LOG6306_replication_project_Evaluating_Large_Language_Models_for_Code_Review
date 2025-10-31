@@ -1,0 +1,11 @@
+Here is my feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_bored(S):
+      import re
+      sentences = re.split(r'[.?!]\s*', S)
+      return sum(1 for sentence in sentences if sentence.startswith('I '))

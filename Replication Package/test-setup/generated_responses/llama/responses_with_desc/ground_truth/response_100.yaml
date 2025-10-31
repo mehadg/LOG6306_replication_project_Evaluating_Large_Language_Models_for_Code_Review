@@ -1,0 +1,8 @@
+feedback:
+  classified_type: Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        from math import floor, ceil
+        num = float(value)
+        return ceil(num) if num >= 0 else floor(num)

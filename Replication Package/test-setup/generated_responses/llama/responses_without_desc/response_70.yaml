@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def search(lst: List[int]) -> int:
+        counts = {}
+        for x in lst:
+            if x in counts:
+                counts[x] += 1
+            else:
+                counts[x] = 1
+        return max(counts, key=counts.get)

@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def move_one_ball(arr):
+        if len(arr) == 0:
+            return True
+        arr = sorted(arr)
+        min_value = arr[0]
+        min_index = arr.index(min_value)
+        my_arr = [elem for elem in arr[min_index:]] + arr[:min_index]
+        return all(my_arr == arr)

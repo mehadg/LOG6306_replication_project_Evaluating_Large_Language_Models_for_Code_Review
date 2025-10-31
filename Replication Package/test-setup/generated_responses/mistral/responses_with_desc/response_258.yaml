@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encode(message):
+        vowels = "AEIOU"
+        alphabet = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+        message_list = list(message)
+
+        for i in range(len(message)):
+            if message[i].isalpha():
+                if message[i] in vowels:
+                    message_list[i] = alphabet[(alphabet.index(message[i]) + 2) % 26]
+                elif message[i].islower():
+                    message_list[i] = message[i].upper()
+                else:
+                    message_list[i] = message[i].lower()
+
+        return ''.join(message_list)

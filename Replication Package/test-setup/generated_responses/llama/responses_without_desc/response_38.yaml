@@ -1,0 +1,14 @@
+Here is my feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sort_even(l: List):
+        l_prime = l[:]  # Make a copy of the input list
+        for i in range(0, len(l), 2):  # Iterate over even indicies
+            l_prime[i:i+2] = sorted((l[i], l[i+1]))  # Sort values at these indicies
+        return l_prime

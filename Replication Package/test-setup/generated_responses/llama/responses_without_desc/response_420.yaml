@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def is_bored(sentences):
+        sentences = [sentence.strip() for sentence in sentences.split('. ') + sentences.split('? ') + sentences.split('! ')]
+        return sum(1 for sentence in sentences if sentence.lower().startswith('i'))

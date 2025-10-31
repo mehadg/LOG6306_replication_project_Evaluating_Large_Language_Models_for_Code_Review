@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def histogram(test: str) -> dict:
+        counts = {}
+        for word in test.split():
+            counts[word] = counts.get(word, 0) + 1
+        return counts

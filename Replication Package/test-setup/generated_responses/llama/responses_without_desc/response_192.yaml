@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def flip_case(string: str) -> str:
+      flipped_string = ''
+      for char in string:
+        if char.isupper():
+          flipped_string += char.lower()
+        else:
+          flipped_string += char.upper()
+      return flipped_string

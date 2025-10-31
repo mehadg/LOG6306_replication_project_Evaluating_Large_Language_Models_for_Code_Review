@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+        if n % 2 != 0:
+            return False
+        for i in range(2, n//2 + 1):
+            if i % 2 == 0 and sum(range(i, n//2 + 1, 2)) == n - i:
+                return True
+        return False

@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def smallest_change(arr: List[int]):
+        # Replaced the range function to handle the case when len(arr) is odd
+        for i in range(len(arr) // 2 + bool(len(arr) % 2)):
+            if arr[i] != arr[-i - 1]:
+                return 1
+        return 0

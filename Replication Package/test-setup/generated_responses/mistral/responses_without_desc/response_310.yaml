@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Callable
+
+    def order_by_points(nums: List[int]):
+        def point(n: int) -> int:
+            return (sum(int(d) for d in str(abs(n))), nums.index(n))
+        return sorted(nums, key=point, reverse=True)

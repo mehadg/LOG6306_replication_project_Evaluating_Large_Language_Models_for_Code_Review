@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def cycpattern_check(a: List[str], b: str) -> bool:
+        b_rotations = [b[i:]+b[:i] for i in range(len(b))]
+        return any(x in a for x in b_rotations)

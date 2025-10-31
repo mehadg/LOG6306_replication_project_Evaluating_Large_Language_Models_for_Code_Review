@@ -1,0 +1,16 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_prime_factor(n: int):
+      if n % 2 == 0:
+        return 2
+      factor = 3
+      while factor * factor <= n:
+        while n % factor == 0:
+          n = n // factor
+        factor += 2
+      return n

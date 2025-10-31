@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+      if value[0] == '-':
+        return int('-' + str(int(value[1:]) + (int(value[1:]) >= 0)))
+      else:
+        return int(value)

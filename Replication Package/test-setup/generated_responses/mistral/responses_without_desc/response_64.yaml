@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fibfib(n: int):
+        if n < 0:
+            return "Error: Fibonacci sequence cannot take negative numbers"
+        elif n == 0 or n == 1:
+            return n
+        else:
+            a, b = 0, 1
+            for _ in range(2, n):
+                a, b = b, a + b
+            return b

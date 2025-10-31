@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_array(array):
+        if not array:
+            return []
+        sum_start_end = sum(array[0], array[-1])
+        sorted_array = sorted(array)
+        if sum_start_end % 2 == 0:
+            return sorted_array[::-1]
+        else:
+            return sorted_array

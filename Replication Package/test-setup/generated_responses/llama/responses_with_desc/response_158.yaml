@@ -1,0 +1,10 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def right_angle_triangle(a, b, c):
+      side1 = max((a**2 + b**2 - c**2) // 2 for _ in range(3))
+      return a**2 + b**2 == c**2

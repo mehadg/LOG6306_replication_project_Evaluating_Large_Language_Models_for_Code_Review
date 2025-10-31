@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def numerical_letter_grade(grades: List[float]) -> List[str]:
+        letter_grades = []
+        for grade in grades:
+            if 4.0 <= grade < 3.7:
+                letter_grades.append('A+')
+            elif 3.7 <= grade < 3.3:
+                letter_grades.append('A')
+            # ... Continue this pattern for the rest of the conditions
+            # Add the missing case for grades below 0.0
+            elif grade < 0.0:
+                letter_grades.append('E')
+        return letter_grades

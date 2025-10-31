@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def same_chars(s0: str, s1: str):
+        if sorted(list(set(s0))) == sorted(list(set(s1))):
+            return True
+        else:
+            return False

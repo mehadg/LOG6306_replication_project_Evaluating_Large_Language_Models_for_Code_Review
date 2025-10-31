@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, n):
+      s = s.lower()
+      num_apples, num_oranges = map(int, [x.split()[-1] for x in s.split(" and ")])
+      return n - num_apples - num_oranges

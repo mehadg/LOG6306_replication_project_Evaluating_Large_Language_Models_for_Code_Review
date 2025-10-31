@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def even_odd_count(num):
+        return (sum(int(digit) % 2 == 0 for digit in str(abs(num))), sum(int(digit) % 2 != 0 for digit in str(abs(num))))

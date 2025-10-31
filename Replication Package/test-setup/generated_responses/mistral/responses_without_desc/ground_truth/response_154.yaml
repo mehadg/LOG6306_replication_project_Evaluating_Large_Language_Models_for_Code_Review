@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    def Strongest_Extension(class_name, extensions: List[str]):
+        strong = extensions[0]
+        my_val = sum(1 for c in extensions[0] if c.isupper() and c.isalpha()) - sum(1 for c in extensions[0] if c.islower() and c.isalpha())
+        for s in extensions:
+            val = sum(1 for c in s if c.isupper() and c.isalpha()) - sum(1 for c in s if c.islower() and c.isalpha())
+            if val > my_val:
+                strong = s
+                my_val = val
+        ans = class_name + "." + strong
+        return ans

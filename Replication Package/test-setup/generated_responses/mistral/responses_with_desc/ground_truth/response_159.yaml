@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def find_max(words):
+        from collections import Counter
+        counter = [Counter(word) for word in words]
+        max_count = max(counter, key=lambda x: len(x))
+        return max(words, key=lambda x: max_count[x])

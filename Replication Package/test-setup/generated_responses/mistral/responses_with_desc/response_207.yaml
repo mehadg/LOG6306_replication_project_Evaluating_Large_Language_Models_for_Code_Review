@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def incr_list(lst: List[int]):
+        return [x + 1 for x in lst]

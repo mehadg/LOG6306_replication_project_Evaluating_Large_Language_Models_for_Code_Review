@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def string_to_md5(text):
+        if text == "":
+            return None
+        else:
+            m = hashlib.md5()
+            m.update(text.encode())
+            return m.hexdigest()

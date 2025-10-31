@@ -1,0 +1,14 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def eat(number, need, remaining):
+        if need <= remaining:
+            return [number + need, remaining - need]
+        else:
+            return [number + remaining, 0]

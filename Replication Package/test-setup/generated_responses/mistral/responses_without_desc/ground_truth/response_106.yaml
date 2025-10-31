@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def by_length(arr):
+        dic = {
+            1: "One",
+            2: "Two",
+            3: "Three",
+            4: "Four",
+            5: "Five",
+            6: "Six",
+            7: "Seven",
+            8: "Eight",
+            9: "Nine"
+        }
+        sorted_arr = sorted(arr, reverse=True)
+        new_arr = [dic.get(var, str(var)) for var in sorted_arr]
+        return new_arr

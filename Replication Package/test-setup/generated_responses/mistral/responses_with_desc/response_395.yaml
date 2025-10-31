@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def digitSum(s):
+        return sum(ord(c) for c in s if c.isupper())

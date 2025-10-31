@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def monotonic(l: List) -> bool:
+        increasing = all(x <= y for x, y in zip(l, l[1:]))
+        decreasing = all(x >= y for x, y in zip(l, l[1:]))
+        return increasing or decreasing

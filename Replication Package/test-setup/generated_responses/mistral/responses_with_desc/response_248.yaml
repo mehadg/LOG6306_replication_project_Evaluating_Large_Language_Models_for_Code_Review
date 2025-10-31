@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def starts_one_ends(n):
+        if n == 1:
+            return 2
+        elif n <= 9:
+            return 1
+        else:
+            return (starts_one_ends(n - 1) + starts_one_ends(n - 10)) * 9 + 10 * starts_one_ends(n - 9)

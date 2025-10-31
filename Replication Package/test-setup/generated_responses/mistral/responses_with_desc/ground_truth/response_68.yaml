@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(fruits, total):
+        fruits_list = fruits.split(' ')
+        apples, oranges = map(int, filter(lambda x: 'apples' in x, fruits_list)) if any(x in "apples" for x in fruits_list) else (0, 0)
+        mangoes = total - apples - oranges
+        return mangoes

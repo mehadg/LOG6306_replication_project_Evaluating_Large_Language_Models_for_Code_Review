@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def cycpattern_check(a, b):
+        for _ in range(len(b)):
+            if b in a:
+                return True
+        return False

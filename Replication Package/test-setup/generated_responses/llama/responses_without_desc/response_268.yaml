@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import Union
+
+    def rounded_avg(n: int, m: int) -> str:
+        if n > m:
+            return "Error: n cannot be greater than m"
+        avg = round((n + m) / 2)
+        return format(avg, 'b')

@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def skjkasdkd(lst: List[int]) -> int:
+        def is_prime(n):
+            for i in range(2, int(n ** 0.5) + 1):
+                if n % i == 0:
+                    return False
+            return True
+        
+        max_val = 0
+        for num in lst:
+            if num > max_val and is_prime(num):
+                max_val = num
+        
+        result = sum(int(digit) for digit in str(max_val))
+        return result

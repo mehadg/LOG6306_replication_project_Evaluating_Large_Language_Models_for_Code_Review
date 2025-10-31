@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sorted_list_sum(lst):
+      even_words = [word for word in lst if len(word) % 2 == 0]
+      even_words.sort()
+      return sum(int(len(word)) for word in even_words)

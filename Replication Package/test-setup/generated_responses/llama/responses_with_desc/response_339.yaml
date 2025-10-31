@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_palindrome(string: str) -> bool:
+        return string == string[::-1]
+
+    def make_palindrome(s: str) -> str:
+        if not s:
+            return ''
+        i = len(s) - 1
+        while not is_palindrome(s[:i+1]):
+            i -= 1
+        return s + s[:i][::-1]

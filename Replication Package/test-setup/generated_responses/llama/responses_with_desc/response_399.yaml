@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def strange_sort_list(lst):
+      if not lst:
+        return []
+      sorted_lst = sorted(lst)
+      result = [x for x in sorted_lst]
+      while len(result) > 1:
+        result.pop(0)
+        if result[-1] != max(sorted_lst):
+          result.append(max(sorted_lst))
+          sorted_lst.remove(max(sorted_lst))
+      return result

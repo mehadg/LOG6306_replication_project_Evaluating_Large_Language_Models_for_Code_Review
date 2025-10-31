@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def specialFilter(nums):
+        return sum(1 for num in nums if str(num)[0].isodd() and str(num)[-1].isodd() and num > 10)

@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def largest_smallest_integers(lst: List[int]) -> (int, int):
+        smallest = [x for x in lst if x < 0]
+        largest = [x for x in lst if x > 0]
+        return (max(smallest) if smallest else None, min(largest) if largest else None)

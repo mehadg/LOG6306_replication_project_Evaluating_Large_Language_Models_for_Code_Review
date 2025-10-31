@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def eat(number: int, need: int, remaining: int) -> List[int]:
+        return [number + min(need, remaining), max(0, remaining - need)]

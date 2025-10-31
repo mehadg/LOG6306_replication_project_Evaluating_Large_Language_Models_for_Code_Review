@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_positive(numbers: List[int]):
+        return [x for x in numbers if x > 0]

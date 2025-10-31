@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def has_close_elements(numbers: List[float], threshold: float) -> bool:
+        for elem in numbers:
+            for elem2 in numbers:
+                if elem != elem2 and abs(elem - elem2) < threshold:
+                    return True
+        return False

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def below_threshold(lst: List[int], threshold: int) -> bool:
+        for x in lst:
+            if x < threshold:
+                return False
+        return True

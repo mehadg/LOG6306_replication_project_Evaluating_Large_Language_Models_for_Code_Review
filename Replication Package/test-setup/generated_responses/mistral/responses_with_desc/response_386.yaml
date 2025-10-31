@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def monotonic(lst: List[int]) -> bool:
+        return all(x <= y for x, y in zip(lst, lst[1:])) or all(x >= y for x, y in zip(lst, lst[1:]))

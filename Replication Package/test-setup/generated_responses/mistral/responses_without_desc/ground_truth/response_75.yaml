@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def total_match(lst1: List[str], lst2: List[str]) -> List[str]:
+        length_sum1 = sum(len(st) for st in lst1)
+        length_sum2 = sum(len(st) for st in lst2)
+
+        if length_sum1 <= length_sum2:
+            return lst1
+        else:
+            return lst2

@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def derivative(coefficients: List):
+        result = []
+        for i in range(1, len(coefficients)):
+            coeff = coefficients[i]
+            power = i
+            result.append((coeff * power) + (result[-1] if result else 0))
+        return result

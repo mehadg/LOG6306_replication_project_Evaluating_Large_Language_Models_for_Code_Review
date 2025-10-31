@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def specialFilter(nums):
+        return sum(1 for num in nums if num > 10 and all([d % 2 == 1 for d in str(num)]))

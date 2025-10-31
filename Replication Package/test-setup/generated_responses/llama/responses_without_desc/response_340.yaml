@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def string_xor(a: str, b: str) -> str:
+        result = ''
+        for i in range(min(len(a), len(b))):
+            if a[i] == b[i]:
+                result += '0'
+            else:
+                result += '1'
+        return result

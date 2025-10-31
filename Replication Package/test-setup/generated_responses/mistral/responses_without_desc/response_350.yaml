@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def rescale_to_unit(numbers: List[float]):
+        # Find the minimum and maximum numbers in the list
+        min_num = min(numbers)
+        max_num = max(numbers)
+        # Calculate the range of the numbers
+        range_num = max_num - min_num
+        # Return the rescaled numbers
+        return [(num - min_num) / range_num for num in numbers]

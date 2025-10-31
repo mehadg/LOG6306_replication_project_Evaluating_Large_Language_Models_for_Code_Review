@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def triples_sum_to_zero(l: List[int]) -> bool:
+        return any(i + j + k == 0 for i in l for j in l for k in l)

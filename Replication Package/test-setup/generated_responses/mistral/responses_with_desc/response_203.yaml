@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def encode_cyclic(s: str) -> str:
+        # split string to groups. Each of length 3.
+        groups = [s[(i * 3):min((i * 3 + 3), len(s))] for i in range((len(s) + 2) // 3)]
+        # cycle elements in each group. Unless group has fewer elements than 3.
+        groups = [''.join(g[1:] + g[0]) if len(g) == 3 else g for g in groups]
+        return "".join(groups)
+
+    def decode_cyclic(s: str) -> str:
+        # split string to groups. Each of length 3.
+        groups = [s[(i * 3):min((i * 3 + 3), len(s))] for i in range((len(s) + 2) // 3)]
+        # cycle elements in each group. Unless group has fewer elements than 3.
+        groups = [''.join(g[:-1] + g[-1]) if len(g) == 3 else g for g in groups]
+        return "".join(groups)

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def common(l1: List, l2: List):
+        return sorted(set(e for e in l1 if e in l2))

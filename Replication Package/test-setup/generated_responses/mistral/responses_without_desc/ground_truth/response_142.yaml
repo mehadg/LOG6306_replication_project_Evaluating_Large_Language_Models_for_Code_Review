@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def file_name_check(file_name):
+        suf = ['txt', 'exe', 'dll']
+        name, extension = file_name.split(sep='.')
+        if (len(name) == 0 or not name[0].isalpha() or len(extension) != 2 or extension not in suf or len([x for x in name if x.isdigit()]) > 3):
+            return 'No'
+        return 'Yes'

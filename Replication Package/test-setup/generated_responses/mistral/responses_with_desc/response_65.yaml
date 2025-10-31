@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def vowels_count(s):
+        count = 0
+        for c in s:
+            if c.lower() in ['a', 'e', 'i', 'o', 'u'] or (c.lower() == 'y' and not s[:-1].endswith('y')):
+                count += 1
+        return count

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    import math
+
+    def max_fill(grid: List[List[int]], capacity: int) -> int:
+        return sum([math.ceil(sum(row)/capacity) for row in grid])

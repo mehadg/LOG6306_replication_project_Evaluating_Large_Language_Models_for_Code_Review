@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def find_largest_prime_sum(lst: List[int]):
+        def is_prime(n):
+            if n <= 1:
+                return False
+            for i in range(2, int(n ** 0.5) + 1):
+                if n % i == 0:
+                    return False
+            return True
+
+        def sum_digits(n):
+            return sum(int(c) for c in str(n))
+
+        largest_prime = max(filter(is_prime, lst), default=float('inf'))
+        return sum_digits(largest_prime)

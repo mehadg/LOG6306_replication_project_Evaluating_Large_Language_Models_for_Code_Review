@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def valid_date(date):
+        if not date or len(date.split('-')) != 3 or (len(date) == 7 and '-' not in date):
+            return False
+        month, day, year = map(int, date.split('-'))
+        if month < 1 or month > 12:
+            return False
+        valid_days = [31, 28]
+        if month == 2:
+            valid_days[1] += 1
+        elif month in [4, 6, 9, 11]:
+            valid_days[0] = 30
+        if day < 1 or day > valid_days[month - 1]:
+            return False
+        return True

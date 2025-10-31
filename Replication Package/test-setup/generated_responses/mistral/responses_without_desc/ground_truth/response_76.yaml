@@ -1,0 +1,25 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_multiply_of_prime(a):
+        def is_prime(n):
+            if n <= 1:
+                return False
+            for i in range(2, int(n**0.5) + 1):
+                if n % i == 0:
+                    return False
+            return True
+
+        primes = []
+        for i in range(2, 101):
+            if is_prime(i):
+                primes.append(i)
+
+        prime_triples = [(primes[i], primes[j], primes[k])
+                          for i in range(len(primes))
+                          for j in range(i, len(primes))
+                          for k in range(j, len(primes))]
+        prime_triples = [tup for tup in prime_triples if sum(tup) == a]
+        return prime_triples if prime_tripes else False

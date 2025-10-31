@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def even_odd_count(num):
+        return tuple(map(lambda x: sum([1 for digit in str(abs(num)) if (digit == str(x) or digit == str(-x)) % 2 == 0]), range(10)))

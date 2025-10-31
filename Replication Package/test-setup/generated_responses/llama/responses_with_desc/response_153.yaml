@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare(game, guess):
+      return [abs(g - g_i) for g_i, g in zip(game, guess)]

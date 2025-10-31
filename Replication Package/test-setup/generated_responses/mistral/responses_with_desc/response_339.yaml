@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def is_palindrome(string: str) -> bool:
+        return string == string[::-1]
+
+    def make_palindrome(s: str) -> str:
+        if not s:
+            return ''
+
+        for i in range(len(s), 0, -1):
+            if is_palindrome(s[i:]):
+                prefix = s[:i]
+                return s + prefix[::-1]

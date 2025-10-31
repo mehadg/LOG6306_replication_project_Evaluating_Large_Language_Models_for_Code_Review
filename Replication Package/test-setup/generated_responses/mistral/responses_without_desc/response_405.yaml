@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_simple_power(x, n):
+        i = 1
+        while n ** i < x and i * n != x:
+            i += 1
+        return n ** i == x or (i >= x and not x % n)

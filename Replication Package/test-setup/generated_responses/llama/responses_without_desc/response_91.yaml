@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def next_smallest(lst):
+      if len(lst) == 1 or any(x < y for x, y in zip(lst, lst[1:])):
+        return min(x for x in set(lst))
+      else:
+        return sorted(set(lst))[1]

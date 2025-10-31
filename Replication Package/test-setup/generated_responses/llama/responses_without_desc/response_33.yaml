@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    import math
+    
+    def poly(xs: list, x: float):
+        return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])
+    
+    def find_zero(xs: list, epsilon=1e-6):
+        a, b = -1e6, 1e6
+        while abs(b - a) > epsilon:
+            mid = (a + b) / 2
+            if poly(a) * poly(mid) < 0:
+                b = mid
+            else:
+                a = mid
+        return (a + b) / 2

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Callable
+    from operator import itemgetter
+
+    def order_by_points(nums):
+        def points(n):
+            return (sum(int(d) for d in str(abs(n))), n)
+        return sorted(nums, key=points)

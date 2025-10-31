@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def monotonic(l: List[int]) -> bool:
+        return l == sorted(l) or l == sorted(l, reverse=True)

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def string_xor(a: str, b: str) -> str:
+        return ''.join('0' if c1 == c2 else '1' for c1, c2 in zip(a, b))

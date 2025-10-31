@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Tuple
+
+    def order_by_points(nums: List[int]):
+        sorted_nums = sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x)))
+        return sorted_nums

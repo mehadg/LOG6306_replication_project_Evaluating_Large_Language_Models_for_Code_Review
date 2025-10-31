@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def below_threshold(l: List[int], t: int):
+        return all(x < t for x in l)

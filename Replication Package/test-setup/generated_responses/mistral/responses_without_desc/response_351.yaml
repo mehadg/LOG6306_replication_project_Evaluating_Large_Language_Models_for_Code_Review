@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def filter_integers(values: List):
+        return [i for i in values if type(i) == int]

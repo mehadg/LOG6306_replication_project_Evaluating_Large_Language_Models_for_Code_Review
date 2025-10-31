@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, n):
+      s = s.lower()
+      items = [item.strip() for item in s.split()]
+      num_apples = int(items.count('apples'))
+      num_oranges = int(items.count('oranges'))
+      return n - num_apples - num_oranges

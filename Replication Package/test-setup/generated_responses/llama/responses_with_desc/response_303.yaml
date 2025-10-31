@@ -1,0 +1,19 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+      if n % 2 != 0:
+        return False
+      for i in range(2, n//2 + 1):
+        if i % 2 == 0:
+          even_sum = 0
+          for j in range(i, n//2 + 1):
+            if j % 2 == 0:
+              even_sum += j
+              if even_sum == n:
+                return True
+      return False

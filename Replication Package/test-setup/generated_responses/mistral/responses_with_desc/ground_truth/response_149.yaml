@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def bf(planet1, planet2):
+        planet_names = ("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+        if planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2:
+            return ()
+        planet_names.remove(planet1)
+        planet_names.remove(planet2)
+        planets_between = sorted(planet_names, key=planet_names.index)
+        return tuple(planets_between)

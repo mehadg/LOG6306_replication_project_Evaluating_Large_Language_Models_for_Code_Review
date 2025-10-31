@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_row(lst, x):
+        result = []
+        for row in lst:
+            if x in row:
+                result.append((lst.index(row), row.index(x)))
+        result.sort(key=lambda coord: (coord[0], -coord[1]))
+        return result

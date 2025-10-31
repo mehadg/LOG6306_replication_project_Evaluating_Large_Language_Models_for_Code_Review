@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sum_product(numbers: List[int]):
+        result = (0, 1)
+        if numbers:
+            result = (sum(numbers), 1)
+            for i in numbers:
+                result[0] *= i
+
+        return result

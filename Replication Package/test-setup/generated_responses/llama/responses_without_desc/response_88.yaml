@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_row(lst, x):
+      from typing import List
+
+      result = []
+      for i, row in enumerate(lst):
+        for j, value in enumerate(row):
+          if value == x:
+            result.append((i, j))
+      result.sort(key=lambda coord: (coord[0], -coord[1]))
+      return result

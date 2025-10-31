@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def below_zero(operations: List[int]):
+        balance = 0
+        for operation in operations:
+            balance += operation
+            if balance < 0:
+                return True
+        return False

@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def make_palindrome(string: str) -> str:
+        def is_palindrome(s: str) -> bool:
+            return s == s[::-1]
+
+        if not string:
+            return ''
+
+        beginning_of_suffix = len(string)
+
+        while not is_palindrome(string[beginning_of_suffix:]):
+            beginning_of_suffix -= 1
+
+        return string[:beginning_of_suffix][::-1] + string

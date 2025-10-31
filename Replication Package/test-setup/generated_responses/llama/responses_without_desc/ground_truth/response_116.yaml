@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from math import ceil
+    def max_fill(grid, capacity):
+      return sum([ceil(sum(arr)/capacity) for arr in grid])

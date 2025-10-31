@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+        for a in range(2, n // 2 + 1):
+            for b in range(a + 2, n // 2 + 1):
+                for c in range(b + 2, n // 2 + 1):
+                    for d in range(c + 2, n):
+                        if (a + b + c + d == n) and (a % 2 == 0 and b % 2 == 0 and c % 2 == 0 and d % 2 == 0):
+                            return True
+        return False

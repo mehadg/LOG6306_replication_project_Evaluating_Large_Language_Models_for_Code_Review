@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def simplify(x, n):
+        x, y = map(int, x.split("/"))
+        a, b = map(int, n.split("/"))
+        result = (x * a) // (y * b) == x * a // y * b
+        return result

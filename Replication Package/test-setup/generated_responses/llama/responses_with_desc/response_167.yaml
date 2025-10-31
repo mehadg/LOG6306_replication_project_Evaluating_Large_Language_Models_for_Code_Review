@@ -1,0 +1,9 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def truncate_number(number: float) -> float:
+      return number - int(number)

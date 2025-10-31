@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def do_algebra(operator, operand):
+        expression = str(operand[0])
+        for oprt, oprn in zip(operator, operand[1:]):
+            if isinstance(oprt, str) and isinstance(oprn, (int, float)):
+                expression += oprt + str(oprn)
+            elif isinstance(oprt, (int, float)) and isinstance(oprn, str):
+                expression += str(oprt) + oprn
+        return eval(expression)

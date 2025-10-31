@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def strange_sort_list(lst):
+        from typing import List
+        res, switch = [], True
+        while lst:
+            if switch:
+                res.append(max(lst))
+            else:
+                res.append(min(lst))
+            lst.remove(res[-1])
+            switch = not switch
+        return list(res)

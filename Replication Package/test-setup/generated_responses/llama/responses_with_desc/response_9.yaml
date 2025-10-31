@@ -1,0 +1,19 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Tuple
+
+    def sum_product(numbers: List[int]) -> Tuple[int, int]:
+        if not numbers:
+            return (0, 1)
+        else:
+            product = 1
+            total_sum = 0
+            for i in numbers:
+                product *= i
+                total_sum += i
+            return (total_sum, product)

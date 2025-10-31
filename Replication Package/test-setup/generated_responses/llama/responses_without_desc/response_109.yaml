@@ -1,0 +1,10 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def count_nums(arr):
+      count = sum(1 for num in arr if sum(int(digit) for digit in str(abs(num))) > 0)
+      return count

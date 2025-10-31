@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def eat(number, need, remaining):
+        total = number + need
+        if total > remaining:
+            return [remaining, number + need - remaining]
+        else:
+            return [total, remaining - total]

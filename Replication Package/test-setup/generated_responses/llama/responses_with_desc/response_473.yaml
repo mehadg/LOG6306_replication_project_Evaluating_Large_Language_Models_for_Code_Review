@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from fractions import Fraction
+
+def simplify(x, n):
+    x = Fraction(x).limit_denominator()
+    n = Fraction(n).limit_denominator()
+    result = x * n
+    return result.denominator == 1

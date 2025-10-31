@@ -1,0 +1,13 @@
+Here is my feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def change_base(x: int, base: int):
+      digits = []  # Initialize empty list of digits
+      while x > 0:  # Repeat until x becomes 0
+        digits.append(str(x % base))  # Append remainder to list of digits
+        x //= base  # Update x to be the quotient
+      return "".join(reversed(digits))  # Join digits as a string

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def words_string(s):
+        if not s:
+            return []
+
+        s_list = list(filter(lambda x: x or x == ',', s))
+        s_list = [''.join(group) for i, group in itertools.groupby(s_list) if not i]
+        return s_list

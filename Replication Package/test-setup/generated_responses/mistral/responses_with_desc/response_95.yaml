@@ -1,0 +1,22 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def find_largest_prime_sum(lst):
+        def is_prime(n):
+            if n <= 1:
+                return False
+            for i in range(2, int(n ** 0.5) + 1):
+                if n % i == 0:
+                    return False
+            return True
+
+        def sum_digits(n):
+            return sum(int(c) for c in str(n))
+
+        largest_prime = max(filter(is_prime, lst), default=None)
+        if largest_prime:
+            return sum_digits(largest_prime)
+        else:
+            return 0

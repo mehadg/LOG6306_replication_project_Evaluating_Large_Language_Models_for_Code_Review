@@ -1,0 +1,18 @@
+Here is my feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def greatest_common_divisor(a: int, b: int) -> int:
+        if a == 0 and b == 0:
+            return None
+        elif a == 0:
+            return b
+        elif b == 0:
+            return a
+        else:
+            while b != 0:
+                a, b = b, a % b
+            return a

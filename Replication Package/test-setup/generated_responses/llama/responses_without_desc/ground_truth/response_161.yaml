@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def do_algebra(operator, operand):
+        expression = ""
+        for oprt, oprn in zip(operator, operand):
+            expression += str(oprn)
+            if operator.index(oprt) < len(operator) - 1:
+                expression += oprt
+        return eval("{" + expression + "}")

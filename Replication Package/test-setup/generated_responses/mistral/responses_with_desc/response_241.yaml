@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_simple_power(x, n):
+        if x < n:
+            return False
+        i = 1
+        while n ** i != x and i < x:
+            i += 1
+        return n ** i == x

@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def generate_integers(a, b):
+        from typing import List
+
+        # make sure a is always smaller than b
+        if a > b:
+            a, b = b, a
+        # create an empty list to store the even digits
+        even_digits = []
+        for i in range(a, b+1):
+            if i % 2 == 0 and i >= 0:
+                even_digits.append(i)
+        return even_digits

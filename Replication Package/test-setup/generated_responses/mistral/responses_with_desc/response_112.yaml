@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from collections import Counter
+
+    def histogram(test):
+        return dict(Counter(test.split()))

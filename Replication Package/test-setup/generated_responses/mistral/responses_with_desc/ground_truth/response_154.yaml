@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def Strongest_Extension(class_name, extensions):
+        strongest = extensions[0]
+        strength_score = sum(1 for char in strongest if char.isupper()) - sum(1 for char in strongest if char.islower())
+        for extension in extensions[1:]:
+            score = sum(1 for char in extension if char.isupper()) - sum(1 for char in extension if char.islower())
+            if score > strength_score:
+                strongest, strength_score = extension, score
+        return f"{class_name}.{strongest}"

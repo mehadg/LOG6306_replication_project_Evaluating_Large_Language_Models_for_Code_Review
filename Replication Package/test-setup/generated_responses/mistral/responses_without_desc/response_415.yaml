@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def anti_shuffle(s):
+        from typing import List
+
+        def sort_word(word):
+            return ''.join(sorted(word, key=lambda x: ord(x)))
+
+        sorted_words = [sort_word(word) for word in s.split()]
+        # In case of empty words or spaces only, join with spaces to match original input format
+        if not any([len(word) > 0 for word in sorted_words]):
+            return ''
+        else:
+            return ' '.join(sorted_words)

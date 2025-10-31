@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def eat(number, need, remaining):
+        total = number + need
+        return [total, min(remaining, total)]

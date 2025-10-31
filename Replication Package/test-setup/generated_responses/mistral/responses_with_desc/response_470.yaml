@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def file_name_check(file_name):
+        if re.search(r"^[a-zA-Z]\w{0,2}\.[a-z]{3}$", file_name) and (file_name.endswith(".txt") or file_name.endswith(".exe") or file_name.endswith(".dll")):
+            return 'Yes'
+        else:
+            return 'No'

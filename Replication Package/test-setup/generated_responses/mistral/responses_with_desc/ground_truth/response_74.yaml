@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def smallest_change(arr: List[int]):
+        arr = arr[:len(arr) // 2] + arr[::-1][len(arr) // 2:]
+        return len(list(filter(lambda x: x != arr.count(x), arr)))

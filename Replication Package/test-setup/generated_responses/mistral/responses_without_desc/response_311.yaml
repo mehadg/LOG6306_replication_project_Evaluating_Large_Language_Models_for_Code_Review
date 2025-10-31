@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def specialFilter(nums: List[int]):
+        return sum(num for num in nums if 10 < num and str(num)[0] in "13579" and str(num)[-1] in "13579")

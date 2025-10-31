@@ -1,0 +1,13 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def modp(n: int, p: int):
+        if n == 0:
+            return 1
+        result = 2 ** (n % p)
+        result %= p
+        return result

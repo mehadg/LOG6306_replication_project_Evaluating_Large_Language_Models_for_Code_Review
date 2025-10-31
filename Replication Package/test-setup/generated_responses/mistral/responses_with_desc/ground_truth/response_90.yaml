@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encrypt(s):
+        alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        encrypted = ''
+        for c in s:
+            if c in alphabet:
+                position = alphabet.index(c) + (2 * 2) % 26
+                encrypted += alphabet[position]
+            else:
+                encrypted += c
+        return encrypted

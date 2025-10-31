@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def even_odd_palindrome(n):
+      s = str(n)
+      if s == s[::-1]:
+        return "palindrome"
+      else:
+        return "not a palindrome"

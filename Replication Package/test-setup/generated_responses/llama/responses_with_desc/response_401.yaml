@@ -1,0 +1,9 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def will_it_fly(q, w):
+      return q == str(q)[::-1] and sum(q) <= w

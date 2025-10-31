@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def pluck(arr):
+        if not arr:
+            return []
+        min_val = float('inf')
+        for i, x in enumerate(arr):
+            if x % 2 == 0 and x < min_val:
+                min_val = x
+        if min_val == float('inf'):
+            return [min_val, -1] # To handle cases where no even values are found
+        return [min_val, arr.index(min_val)]

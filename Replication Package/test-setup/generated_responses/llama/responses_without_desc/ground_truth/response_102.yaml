@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def words_string(s):
+      if not s:
+        return []
+      
+      s_list = [c if c != ',' else ' ' for c in s]
+      return s_list.split()

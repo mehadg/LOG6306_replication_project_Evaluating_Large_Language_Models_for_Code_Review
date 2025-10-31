@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def hex_key(num):
+      primes = '23BSD'
+      count = sum(1 for digit in num if digit in primes)
+      return count

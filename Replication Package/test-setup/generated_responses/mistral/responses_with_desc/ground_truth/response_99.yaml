@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def count_upper(s):
+        return sum(1 for i, char in enumerate(s) if char.isupper() and i % 2 == 0)

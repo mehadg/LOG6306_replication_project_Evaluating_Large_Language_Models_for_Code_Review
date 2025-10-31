@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def parse_music(music_string: str) -> List[int]:
+        beats = {'o': 4, 'o|': 2, '.|': 1}
+        result = []
+        for note in music_string.split():
+            if note not in beats:
+                raise ValueError(f"Invalid note '{note}', valid notes are o, o|, .|")
+            result.append(beats[note])
+        return result

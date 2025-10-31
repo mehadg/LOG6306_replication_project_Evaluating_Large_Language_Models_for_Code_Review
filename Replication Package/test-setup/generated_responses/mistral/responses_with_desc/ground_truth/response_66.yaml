@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def circular_shift(x, shift):
+        s = str(x)
+        result = s[len(s) - shift:] + s[:len(s) - shift] if shift <= len(s) else s[::-1]
+        return result

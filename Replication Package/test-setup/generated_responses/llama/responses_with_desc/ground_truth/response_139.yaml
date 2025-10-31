@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+      even_numbers = [i for i in range(2, n, 2)]
+      return len(even_numbers) >= 4 and sum(even_numbers) == n

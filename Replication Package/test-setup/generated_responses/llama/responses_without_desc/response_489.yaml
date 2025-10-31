@@ -1,0 +1,26 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def do_algebra(operator, operand):
+      if len(operand) != len(operator) + 1:
+        raise ValueError("Invalid input")
+      result = operand[0]
+      for i in range(len(operator)):
+          op = operator[i]
+          opd = operand[i+1]
+          # perform the operation
+          if op == '+':
+              result += opd
+          elif op == '-':
+              result -= opd
+          elif op == '*':
+              result *= opd
+          elif op == '//':
+              result //= opd
+          elif op == '**':
+              result **= opd
+      return result

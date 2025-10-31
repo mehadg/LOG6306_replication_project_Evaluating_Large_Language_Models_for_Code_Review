@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def strange_sort_list(lst: List[int]):
+        if not lst:
+            return []
+        sorted_lst = sorted(lst)
+        result = [sorted_lst[i] for i in range(len(sorted_lst))]
+        return result

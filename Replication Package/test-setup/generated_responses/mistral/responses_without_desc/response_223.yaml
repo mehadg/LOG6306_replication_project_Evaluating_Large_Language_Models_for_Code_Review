@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def common(l1: List[any], l2: List[any]):
+        return sorted(list(set(l1) & set(l2)))

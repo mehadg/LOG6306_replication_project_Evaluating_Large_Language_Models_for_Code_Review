@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_closest_vowel(word):
+        vowels = {"a", "e", "i", "o", "u", "A", "E", 'O', 'U', 'I'}
+        for i in range(len(word)-1):
+            if word[i] not in vowels and word[i+1] in vowels:
+                return word[i+1]
+        return ""

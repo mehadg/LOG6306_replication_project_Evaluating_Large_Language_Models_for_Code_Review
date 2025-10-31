@@ -1,0 +1,78 @@
+user='''You are an experienced Python developer. You will be provided with a code block and a corresponding problem description. Your task is to understand the intended functionality, review the code, and generate feedback. Please follow these steps:
+
+1. Analyze the Code: Understand what the code is meant to do.
+2. Consider Edge Cases: Reflect on all scenarios in which the code should operate.
+3. Evaluate Functionality: Determine whether the code successfully implements the intended functionality across these cases.
+4. Classify the Code:
+   - If the code requires changes, set classified_type to "Incorrect"
+   - If the code does not require any changes, set classified_type to "Correct"
+5. Suggest a Corrected Code Block: In the complete_code field, provide the corrected Python code (or the original code if no changes needed).
+
+Important: Use only the classifications "Correct" or "Incorrect" (case sensitive).
+
+Now, please review the code based on the following code block:
+
+@@ -0,0 +1,20 @@
++def intersection(interval1, interval2):
++    def is_prime(n):
++        if n <= 1:
++            return False
++        for i in range(2, int(n ** 0.5) + 1):
++            if n % i == 0:
++                return False
++        return True
++
++    start = max(interval1[0], interval2[0])
++    end = min(interval1[1], interval2[1])
++    if start <= end:
++        length = end - start + 1
++        if is_prime(length):
++            return "YES"
++        else:
++            return "NO"
++    else:
++        return "NO"
++ 
+
+And the following problem description:
+
+"You are given two intervals,
+    where each interval is a pair of integers. For example, interval = (start, end) = (1, 2).
+    The given intervals are closed which means that the interval (start, end)
+    includes both start and end.
+    For each given interval, it is assumed that its start is less or equal its end.
+    Your task is to determine whether the length of intersection of these two 
+    intervals is a prime number.
+    Example, the intersection of the intervals (1, 3), (2, 4) is (2, 3)
+    which its length is 1, which not a prime number.
+    If the length of the intersection is a prime number, return "YES",
+    otherwise, return "NO".
+    If the two intervals don't intersect, return "NO".
+
+
+    [input/output] samples:
+    intersection((1, 2), (2, 3)) ==> "NO"
+    intersection((-1, 1), (0, 4)) ==> "NO"
+    intersection((-3, -1), (-5, 5)) ==> "YES""
+
+You MUST respond in exactly this YAML format:
+
+```yaml
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def function_name(parameters):
+        # Your Python code here (corrected or original)
+        return result
+```
+
+Apply the following rules strictly:
+- Answer should be valid YAML and nothing else
+- No additional text or explanations outside the YAML structure
+- Replace the example code with your actual corrected/original code
+- Ensure proper indentation (4 spaces for code inside complete_code)
+- Be careful about the indentation and syntax of your suggested code block, make sure it can run without problems'''

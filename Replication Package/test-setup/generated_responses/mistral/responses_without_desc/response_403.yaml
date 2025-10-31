@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def total_match(lst1: List[str], lst2: List[str]) -> List[str]:
+        total_chars_1 = sum(len(s) for s in lst1)
+        total_chars_2 = sum(len(s) for s in lst2)
+        if total_chars_1 == total_chars_2:
+            return lst1 if lst1 else lst2
+        elif total_chars_1 < total_chars_2:
+            return lst1
+        else:
+            return lst2

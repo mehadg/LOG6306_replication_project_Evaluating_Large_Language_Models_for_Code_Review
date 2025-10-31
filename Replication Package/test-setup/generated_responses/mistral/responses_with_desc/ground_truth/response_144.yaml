@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_prime(n):
+        return n > 1 and all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
+
+    def find_primes_in_sentence(sentence):
+        words = sentence.split()
+        primes_words = [word for word in words if len(word) in {2} + list(range(3, 101)) if is_prime(len(word))]
+        return " ".join(primes_words)

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def can_arrange(arr):
+        return max([i for i, val in enumerate(arr) if arr[i - 1] > val], default=-1)

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def get_positive(l: List[int]):
+        return [e for e in l if e > 0]

@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def monotonic(lst: list) -> bool:
+        increasing = all(x <= y for x, y in zip(lst, lst[1:]))
+        decreasing = all(x >= y for x, y in zip(lst, lst[1:]))
+        return increasing or decreasing

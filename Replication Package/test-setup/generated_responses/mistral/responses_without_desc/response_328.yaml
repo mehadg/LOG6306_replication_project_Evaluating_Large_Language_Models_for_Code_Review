@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def generate_integers(a: int, b: int) -> List[int]:
+        if a > b:
+            a, b = b, a
+        return list(filter(lambda i: i % 2 == 0, range(a, b+1)))

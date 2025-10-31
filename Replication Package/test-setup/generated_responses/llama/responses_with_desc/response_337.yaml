@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Tuple
+    def sum_product(numbers: List[int]) -> Tuple[int, int]:
+        result = 1
+        for i in numbers:
+            result *= i
+        return (sum(numbers), result)

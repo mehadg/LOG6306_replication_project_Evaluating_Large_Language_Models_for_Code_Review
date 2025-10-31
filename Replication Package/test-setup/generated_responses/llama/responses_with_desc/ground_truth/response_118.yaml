@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def select_words(s: str, n: int) -> List[str]:
+        result = []
+        for word in s.split():
+            n_consonants = sum(1 for char in word.lower() if not set("aeiou").intersection({char})):
+            if n_consonants == n:
+                result.append(word)
+        return result

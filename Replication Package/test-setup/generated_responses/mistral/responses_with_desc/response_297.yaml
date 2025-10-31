@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_nested(string):
+        stack = []
+        for bracket in string:
+            if bracket == "[":
+                stack.append(bracket)
+            elif bracket == "]":
+                if not stack or stack[-1] != "[":
+                    return True
+                else:
+                    stack.pop()
+        return False

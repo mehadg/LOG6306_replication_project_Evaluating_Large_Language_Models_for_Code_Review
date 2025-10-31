@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def exchange(lst1: List[int], lst2: List[int]):
+        even_nums = [x for x in lst2 if x % 2 == 0]
+        odd_nums = [x for x in lst1 if x % 2 != 0]
+        return "YES" if len(even_nums) >= len(odd_nums) else "NO"

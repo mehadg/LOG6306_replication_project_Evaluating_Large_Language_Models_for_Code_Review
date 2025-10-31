@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def count_distinct_characters(string: str) -> int:
+      return len(set(string.lower()))

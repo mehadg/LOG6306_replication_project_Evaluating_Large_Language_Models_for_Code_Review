@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def odd_count(lst):
+        return [f"the number of odd elements {str(n)}n the str{str(n)}ng {str(n)} of the {str(n)}nput." for arr in lst for n in map(lambda x: sum(int(d) % 2 == 1 for d in arr), lst)]

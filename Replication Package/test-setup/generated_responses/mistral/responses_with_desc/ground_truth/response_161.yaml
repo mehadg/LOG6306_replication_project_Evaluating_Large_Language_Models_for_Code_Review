@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def do_algebra(operator: List, operand: List):
+        expression = str(operand[0])
+        for oprt, oprn in zip(operator, operand[1:]):
+            expression += ' ' + str(oprt) + ' ' + str(oprn)
+        return eval(expression)

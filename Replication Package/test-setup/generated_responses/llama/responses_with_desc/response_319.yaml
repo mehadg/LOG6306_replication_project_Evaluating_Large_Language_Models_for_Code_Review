@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def cycpattern_check(a, b):
+        return a.__contains__(b) or any(a.__contains__(x) for x in [b[i:]+b[:i] for i in range(len(b))])

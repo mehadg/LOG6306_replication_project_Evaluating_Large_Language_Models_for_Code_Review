@@ -1,0 +1,11 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def pairs_sum_to_zero(lst: List[int]) -> bool:
+        return any(l1 + l2 == 0 for i, (l1, l2) in enumerate(zip(lst, lst[1:])) if l1 != l2)

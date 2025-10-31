@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def digits(n):
+      product = 1
+      for digit in str(n):
+        int_digit = int(digit)
+        if int_digit % 2 == 1:
+          product *= int_digit
+      return product if any(int(digit) % 2 == 1 for digit in str(n)) else 0

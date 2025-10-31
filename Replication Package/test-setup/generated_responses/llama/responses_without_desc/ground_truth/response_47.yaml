@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fib4(n: int):
+      if n < 4:
+        return [0, 1][n]
+      results = [0, 0, 2, 1]
+      for _ in range(4, n + 1):
+        results.append(sum(results[-1:0:-1]))
+      return results[-1]

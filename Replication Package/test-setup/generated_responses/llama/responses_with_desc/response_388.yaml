@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_prime_factor(n: int):
+      if n <= 1:
+        raise ValueError("n must be greater than 1")
+      factor = 3
+      while n > 1:
+        while n % factor == 0:
+          n = n // factor
+        factor += 2
+      return n

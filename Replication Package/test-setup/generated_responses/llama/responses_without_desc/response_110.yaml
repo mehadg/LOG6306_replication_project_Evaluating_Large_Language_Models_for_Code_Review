@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def move_one_ball(arr):
+      if len(arr) == 0:
+        return False
+      for i in range(len(arr)):
+        if arr[:i] + sorted([x for x in arr[i:]]) == arr:
+          return True
+      return False

@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sort_array(array: List[int]) -> List[int]:
+        if not array:
+            return []
+        elif (array[0] + array[-1]) % 2 == 0:
+            return sorted(array, reverse=True)
+        else:
+            return sorted(array)

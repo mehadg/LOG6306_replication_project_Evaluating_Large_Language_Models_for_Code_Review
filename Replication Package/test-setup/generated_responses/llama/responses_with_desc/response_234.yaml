@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def search(lst):
+      from collections import Counter
+      counts = Counter(lst)
+      for x in sorted(counts, reverse=True):
+        if x <= counts[x]:
+          return x
+      return -1

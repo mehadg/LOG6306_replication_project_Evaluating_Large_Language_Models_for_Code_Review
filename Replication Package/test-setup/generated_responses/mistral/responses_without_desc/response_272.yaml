@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    def even_odd_palindrome(n):
+        n = str(abs(n))
+        reversed_n = n[::-1]
+        return n == reversed_n and (n[0] in '02468' or n[-1] in '02468') and sum([int(c) for c in n if c not in ['0', '2', '4', '6', '8']]) % 2 == 0

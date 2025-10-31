@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, total_fruits):
+        fruits = s.lower().split(" apples and ")
+        total_apples = int(fruits[0].split(" ")[0])
+        total_oranges = sum([int(orange.split(" ")[-1]) for orange in fruits if " oranges" in orange])
+        return total_fruits - total_apples - total_oranges

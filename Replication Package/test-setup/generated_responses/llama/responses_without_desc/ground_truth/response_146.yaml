@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def order_by_points(nums):
+        def digits_sum(n):
+            neg = 1
+            if n < 0: 
+                n, neg = -n, -1 
+            return sum(int(digit) for digit in str(n))
+        
+        return sorted(nums, key=digits_sum)

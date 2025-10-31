@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def pairs_sum_to_zero(lst):
+        return any(i + j == 0 for i, j in zip(lst, lst[i+1:]))

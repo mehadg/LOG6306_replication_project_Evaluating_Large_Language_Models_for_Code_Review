@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sum_squares(lst):
+        res = 0
+        for num in lst:
+            if isinstance(num, int):
+                res += num ** 2
+        return res

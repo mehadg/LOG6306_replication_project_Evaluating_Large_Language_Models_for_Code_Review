@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def unique_digits(x):
+        from collections import Counter
+
+        digits = {d for num in x for d in str(num)}
+        return [num for num in x if len(list(filter(lambda d: num % d == 0, digits))) == 1 and all(counter[d] == 1 for counter in Counter(digits).items())]

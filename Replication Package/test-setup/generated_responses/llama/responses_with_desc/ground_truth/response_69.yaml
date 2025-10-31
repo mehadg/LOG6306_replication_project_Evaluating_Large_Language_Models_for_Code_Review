@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def pluck(arr):
+        if len(arr) == 0:
+            return []
+        
+        evens = [x for x in arr if x % 2 == 0]
+        if not evens:
+            return []
+        
+        smallest_even = min(evens)
+        indices = [i for i, x in enumerate(arr) if x == smallest_even]
+        return [smallest_even, min(indices)]

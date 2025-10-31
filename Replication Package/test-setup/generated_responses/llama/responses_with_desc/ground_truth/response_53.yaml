@@ -1,0 +1,9 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def below_threshold(l: list, t: int) -> bool:
+        return all(e < t for e in l)

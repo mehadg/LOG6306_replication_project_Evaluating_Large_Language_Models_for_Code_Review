@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def prime_length(string):
+        return len(string) > 1 and all(string % i for i in range(2, 1 + min(len(string), int(len(str(len(string))) / 2))))

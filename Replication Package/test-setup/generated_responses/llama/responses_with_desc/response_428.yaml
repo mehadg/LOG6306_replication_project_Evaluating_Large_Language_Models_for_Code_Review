@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+      value = float(value)
+      if value >= 0:
+        return int(round(value))
+      else:
+        return int(math.floor(value))

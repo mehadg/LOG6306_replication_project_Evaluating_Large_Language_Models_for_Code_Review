@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def median(numbers: List[int]):
+        numbers.sort()
+        n = len(numbers)
+        middle = n // 2
+        if n % 2 == 1:
+            return numbers[middle]
+        else:
+            return (numbers[middle - 1] + numbers[middle]) / 2

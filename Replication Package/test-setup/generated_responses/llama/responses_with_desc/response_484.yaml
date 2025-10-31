@@ -1,0 +1,12 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def even_odd_count(num):
+      num = abs(num)
+      even_count = sum(1 for digit in str(num) if int(digit) % 2 == 0)
+      odd_count = len(str(num)) - even_count
+      return (even_count, odd_count)

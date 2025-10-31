@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def add(lst):
+      return sum([i for i in lst[1::2] if i % 2 == 0])

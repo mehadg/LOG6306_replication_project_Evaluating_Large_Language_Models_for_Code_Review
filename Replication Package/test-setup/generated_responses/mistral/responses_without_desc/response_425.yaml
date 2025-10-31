@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def count_up_to(n: int) -> List[int]:
+        if n < 2:
+            return []
+
+        primes = []
+        for i in range(2, n):
+            if all(i % j != 0 for j in range(2, i)):
+                primes.append(i)
+        return primes

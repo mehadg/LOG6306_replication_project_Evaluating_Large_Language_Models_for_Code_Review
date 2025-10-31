@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def check_if_last_char_is_a_letter(txt):
+        if not txt or txt[-1].isspace():
+            return False
+        return txt[-1].isalpha()

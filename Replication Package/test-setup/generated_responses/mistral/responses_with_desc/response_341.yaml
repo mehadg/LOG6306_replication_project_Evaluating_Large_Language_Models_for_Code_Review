@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def longest(strings: List[str]):
+        if not strings:
+            return None
+        else:
+            return max(strings, key=len)

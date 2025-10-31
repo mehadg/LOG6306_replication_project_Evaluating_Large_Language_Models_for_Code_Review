@@ -1,0 +1,13 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_smallest_integers(lst):
+      negative_numbers = [x for x in lst if x < 0]
+      positive_numbers = [x for x in lst if x > 0]
+      a = max([x for x in lst if x < 0]) if negative_numbers else None
+      b = min([x for x in lst if x > 0]) if positive_numbers else None
+      return (a, b)

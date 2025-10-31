@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare_one(a, b):
+        temp_a = a if isinstance(a, (int, float)) else a.replace(',', '.')
+        temp_b = b if isinstance(b, (int, float)) else b.replace(',', '.')
+        if abs(temp_a - temp_b) < 1e-9: return None
+        return temp_a if temp_a > temp_b else temp_b

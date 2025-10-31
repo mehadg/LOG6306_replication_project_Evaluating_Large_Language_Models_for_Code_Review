@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sort_even(l: List) -> List:
+        l_prime = l[:]
+        for i in range(0, len(l), 2):
+            l_prime[i:i+2] = sorted(l[i:i+2])
+        return l_prime

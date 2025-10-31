@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        from math import floor, ceil
+
+        if value.count('.') > 1:
+            raise ValueError("Invalid input format")
+
+        num = float(value)
+        if abs(num - int(num)) == abs(floor(num) - num):
+            res = ceil(num) if num > 0 else floor(num)
+        elif len(value) > 0:
+            res = int(round(num))
+        else:
+            res = 0
+
+        return res

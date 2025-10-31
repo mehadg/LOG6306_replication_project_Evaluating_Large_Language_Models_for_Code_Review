@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def x_or_y(n, x, y):
+        if n < 2 or n % 2 == 0:
+            return y
+        sqrt_n = int(n**(1/2)) + 1
+        for i in range(2, sqrt_n):
+            if n % i == 0:
+                return y
+        return x

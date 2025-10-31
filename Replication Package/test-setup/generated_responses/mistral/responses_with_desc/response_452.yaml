@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def get_odd_collatz(n):
+        res = []
+        while n != 1:
+            if n % 2 == 0:
+                n = n // 2
+            else:
+                res.append(n)
+                n = 3 * n + 1
+        res.append(1)
+        res = sorted(res)
+        return res

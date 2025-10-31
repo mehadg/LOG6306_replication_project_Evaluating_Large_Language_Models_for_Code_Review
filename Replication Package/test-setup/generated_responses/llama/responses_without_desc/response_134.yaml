@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sum_squares(lst: List[float]) -> float:
+        return sum([math.ceil(x) ** 2 for x in lst])

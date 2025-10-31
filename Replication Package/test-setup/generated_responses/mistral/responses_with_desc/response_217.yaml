@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def below_threshold(l: list, t: int):
+        for x in l:
+            if x >= t:
+                return False
+        return True

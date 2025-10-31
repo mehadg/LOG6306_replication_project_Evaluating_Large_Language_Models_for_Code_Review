@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+        if not numbers:
+            return []
+
+        result = numbers[:]
+        result.extend([delimeter] * (len(numbers) - 1))
+        return result

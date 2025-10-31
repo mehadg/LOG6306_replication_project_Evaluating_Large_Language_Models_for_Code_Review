@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def words_string(s):
+        # No need for type hints in this case, but it's good practice to use them when appropriate
+        return s.split()

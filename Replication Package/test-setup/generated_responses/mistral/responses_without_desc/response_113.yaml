@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import str, List
+
+    def reverse_delete(s: str, c: List[str]):
+        new_s = ''.join([i for i in s if i not in c])
+        return new_s, len(new_s) == len(reversed(c)) and new_s == new_s[::-1]

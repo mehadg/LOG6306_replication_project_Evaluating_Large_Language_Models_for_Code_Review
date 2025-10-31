@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def do_algebra(operator, operand):
+        if len(operand) != len(operator) + 1:
+            raise ValueError("Inconsistent input")
+        result = operand[0]
+        for op, opd in zip(operator, operand[1:]):
+            if op == '+':
+                result += opd
+            elif op == '-':
+                result -= opd
+            elif op == '*':
+                result *= opd
+            elif op == '//':
+                result //= opd
+            elif op == '**':
+                result **= opd
+        return result

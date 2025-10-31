@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def split_words(txt: str) -> List[str]:
+        words = txt.split() if ' ' in txt else (txt.split(',') if ',' in txt else [x for x in txt if x.islower() and ord(x) % 2 != 0])
+        return words

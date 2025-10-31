@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def solution(lst: List[int]):
+        return sum(number for index, number in enumerate(lst) if index % 2 == 0 and number % 2 != 0)

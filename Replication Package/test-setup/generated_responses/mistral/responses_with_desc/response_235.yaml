@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def strange_sort_list(lst):
+        sorted_lst = sorted(lst)
+        result = []
+        for _ in range(len(lst)):
+            min_or_max = len(lst) % (_ + 1) == 0
+            result.append(sorted_lst[0] if not lst else (sorted_lst[-1] if min_or_max else next(filter(lambda x: x != sorted_lst[0], sorted_lst))))
+            lst.remove(result[-1])
+        return result

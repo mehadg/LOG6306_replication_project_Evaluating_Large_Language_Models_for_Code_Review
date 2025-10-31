@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def reverse_delete(s, c):
+        new_s = list(filter(lambda x: x not in c, s))
+        return (''.join(new_s), len(new_s) == len(s))

@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        try:
+            value = float(value)
+        except ValueError:
+            if value[0] == '-':
+                value = float("-".join(value[1:]))
+
+        if math.isclose(math.floor(value), value, abs_tol=1e-8):
+            return int(math.ceil(value))
+        elif math.isclose(math.ceil(value), value, abs_tol=1e-8):
+            return int(math.floor(value))
+        else:
+            return int(value)

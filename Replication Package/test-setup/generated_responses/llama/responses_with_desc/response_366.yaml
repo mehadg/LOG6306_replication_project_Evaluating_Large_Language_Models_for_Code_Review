@@ -1,0 +1,14 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_even(l: list):
+      l_prime = l[:]
+      for i in range(0, len(l), 2):
+        if i+1 < len(l):
+          l_prime[i] = l[i]
+        l_prime[i+1:i+3] = sorted(l[i+1:i+3])
+      return l_prime

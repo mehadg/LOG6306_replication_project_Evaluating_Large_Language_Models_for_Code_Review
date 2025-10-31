@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def remove_vowels(text):
+      return "".join([s for s in text if s.lower() not in "aeiou"])

@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def pluck(arr):
+      if not arr:
+        return []
+      smallest_even = float('inf')
+      smallest_even_index = None
+      for i, x in enumerate(arr):
+        if x % 2 == 0 and x < smallest_even:
+          smallest_even = x
+          smallest_even_index = i
+      return [smallest_even, smallest_even_index] if smallest_even != float('inf') else []

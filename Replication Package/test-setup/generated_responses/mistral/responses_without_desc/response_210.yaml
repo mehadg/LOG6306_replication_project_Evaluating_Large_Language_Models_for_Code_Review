@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import Union
+
+    def triangle_area(a: Union[float, int], h: Union[float, int]):
+        if a > 0 and h > 0:
+            return (a * h) / 2
+        else:
+            raise ValueError("Both base 'a' and height 'h' must be positive numbers.")

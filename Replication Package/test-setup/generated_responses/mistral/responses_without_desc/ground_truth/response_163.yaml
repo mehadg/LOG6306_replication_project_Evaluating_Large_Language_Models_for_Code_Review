@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import (Optional)
+
+    def string_to_md5(text: Optional[str]) -> Optional[str]:
+        if text is None:
+            return None
+
+        import hashlib
+        return hashlib.md5(text.encode('utf-8')).hexdigest()

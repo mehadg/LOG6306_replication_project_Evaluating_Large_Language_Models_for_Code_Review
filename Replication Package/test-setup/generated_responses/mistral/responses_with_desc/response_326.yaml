@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def solve(s):
+        letters = set(string.ascii_letters)
+        for i, char in enumerate(s):
+            if char in letters:
+                s = s[:i] + char.swapcase() + s[i+1:]
+        return s or s[::-1]

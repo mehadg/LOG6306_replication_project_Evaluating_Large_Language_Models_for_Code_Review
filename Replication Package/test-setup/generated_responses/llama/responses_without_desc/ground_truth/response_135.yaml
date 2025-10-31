@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def check_if_last_char_is_a_letter(txt):
+        if txt.split()[-1]:
+            check = txt.split(' ')[-1]
+            return True if len(check) == 1 and (97 <= ord(check.lower()) <= 122) else False

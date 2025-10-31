@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def strange_sort_list(lst):
+        res = []
+        while lst:
+            if len(lst) == 1:
+                res.append(lst[0])
+                break
+            min_max = min(lst) if len(lst) % 2 == 0 else max(lst)
+            res.append(min_max)
+            lst.remove(min_max)
+        return res

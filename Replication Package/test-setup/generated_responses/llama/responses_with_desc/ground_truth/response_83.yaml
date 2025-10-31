@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def prime_length(s):
+        l = len(s)
+        if l <= 1:
+            return False
+        for i in range(2, int(l**0.5) + 1):
+            if l % i == 0:
+                return False
+        return True

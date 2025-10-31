@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def pluck(arr):
+      if not arr:
+        return []
+      result = next((x for x in arr if x % 2 == 0), None)
+      if result is None:
+        return [None, None]
+      return [result, arr.index(result)]

@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    def even_odd_palindrome(n):
+        number_str = str(n)
+        reversed_number_str = number_str[::-1]
+        if n == int(reversed_number_str) and len(number_str) > 1:
+            return "Yes"
+        elif (len(number_str) % 2 == 0 and n % 2 != 0) or (len(number_str) % 2 != 0 and n % 2 == 0):
+            return "No"
+        else:
+            return "It's not a number."

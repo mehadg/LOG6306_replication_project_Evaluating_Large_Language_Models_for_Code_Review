@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def split_words(txt):
+        words = txt.split()
+        if not words and ',' in txt:
+            return txt.split(',')
+        elif not words and (len([x for x in txt if x.islower() and ord(x) % 2 != 0]) > 0):
+            return len([x for x in txt if x.islower() and ord(x) % 2 != 0])
+        return words

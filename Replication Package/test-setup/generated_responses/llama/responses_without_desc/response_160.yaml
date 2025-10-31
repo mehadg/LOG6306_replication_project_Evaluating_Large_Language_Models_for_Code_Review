@@ -1,0 +1,15 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def eat(number, need, remaining):
+        total = number + need
+        if total > remaining:
+            return [remaining, 0]
+        else:
+            return [total, remaining - total]

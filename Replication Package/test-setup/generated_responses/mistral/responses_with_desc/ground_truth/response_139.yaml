@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+        if n % 2 != 0 or n < 8:
+            return False
+        even_numbers = [2, 4, 6] * (n // 4 - 1) + [n - sum(even_numbers)]
+        return all([i % 2 == 0 for i in even_numbers])

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        if value[0] == '-':
+            return abs(int(value) - int(value[1:]))
+        else:
+            return abs(int(value) - int(str(round(float(value)))).rstrip('0').rstrip('.') or '0')

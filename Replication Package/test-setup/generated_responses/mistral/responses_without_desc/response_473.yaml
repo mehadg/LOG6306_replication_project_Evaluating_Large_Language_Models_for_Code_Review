@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def simplify(x, n):
+        x = Fraction(x)
+        n = Fraction(n)
+        result = x * n
+        if result == 1:
+            return True
+        else:
+            return False

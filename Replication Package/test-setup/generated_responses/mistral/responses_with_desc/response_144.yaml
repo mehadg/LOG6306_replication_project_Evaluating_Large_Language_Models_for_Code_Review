@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def words_in_sentence(sentence):
+        from typing import List
+        sentence = list(filter(lambda x: len(x) > 1, sentence.split()))  # Remove non-word elements and convert to a list for prime check
+        result = []
+        for word in sentence:
+            if is_prime(len(word)):
+                result.append(word)
+        return " ".join(result)
+
+    def is_prime(n):
+        if n < 2:
+            return False
+        for i in range(2, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                return False
+        return True

@@ -1,0 +1,96 @@
+user='''You are an experienced Python developer. You will be provided with a code block and a corresponding problem description. Your task is to understand the intended functionality, review the code, and generate feedback. Please follow these steps:
+
+1. Analyze the Code: Understand what the code is meant to do.
+2. Consider Edge Cases: Reflect on all scenarios in which the code should operate.
+3. Evaluate Functionality: Determine whether the code successfully implements the intended functionality across these cases.
+4. Classify the Code:
+   - If the code requires changes, set classified_type to "Incorrect"
+   - If the code does not require any changes, set classified_type to "Correct"
+5. Suggest a Corrected Code Block: In the complete_code field, provide the corrected Python code (or the original code if no changes needed).
+
+Important: Use only the classifications "Correct" or "Incorrect" (case sensitive).
+
+Now, please review the code based on the following code block:
+
+@@ -0,0 +1,33 @@
++def numerical_letter_grade(grades):
++
++   
++    letter_grade = []
++    for gpa in grades:
++        if gpa == 4.0:
++            letter_grade.append("A+")
++        elif gpa > 3.7:
++            letter_grade.append("A")
++        elif gpa > 3.3:
++            letter_grade.append("A-")
++        elif gpa > 3.0:
++            letter_grade.append("B+")
++        elif gpa > 2.7:
++            letter_grade.append("B")
++        elif gpa > 2.3:
++            letter_grade.append("B-")
++        elif gpa > 2.0:
++            letter_grade.append("C+")
++        elif gpa > 1.7:
++            letter_grade.append("C")
++        elif gpa > 1.3:
++            letter_grade.append("C-")
++        elif gpa > 1.0:
++            letter_grade.append("D+")
++        elif gpa > 0.7:
++            letter_grade.append("D")
++        elif gpa > 0.0:
++            letter_grade.append("D-")
++        else:
++            letter_grade.append("E")
++    return letter_grade
++ 
+
+And the following problem description:
+
+"It is the last week of the semester and the teacher has to give the grades
+    to students. The teacher has been making her own algorithm for grading.
+    The only problem is, she has lost the code she used for grading.
+    She has given you a list of GPAs for some students and you have to write 
+    a function that can output a list of letter grades using the following table:
+             GPA       |    Letter grade
+              4.0                A+
+            > 3.7                A 
+            > 3.3                A- 
+            > 3.0                B+
+            > 2.7                B 
+            > 2.3                B-
+            > 2.0                C+
+            > 1.7                C
+            > 1.3                C-
+            > 1.0                D+ 
+            > 0.7                D 
+            > 0.0                D-
+              0.0                E
+    
+
+    Example:
+    grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']"
+
+You MUST respond in exactly this YAML format:
+
+```yaml
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def function_name(parameters):
+        # Your Python code here (corrected or original)
+        return result
+```
+
+Apply the following rules strictly:
+- Answer should be valid YAML and nothing else
+- No additional text or explanations outside the YAML structure
+- Replace the example code with your actual corrected/original code
+- Ensure proper indentation (4 spaces for code inside complete_code)
+- Be careful about the indentation and syntax of your suggested code block, make sure it can run without problems'''

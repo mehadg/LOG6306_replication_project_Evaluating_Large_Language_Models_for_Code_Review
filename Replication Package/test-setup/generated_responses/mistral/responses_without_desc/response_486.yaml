@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def right_angle_triangle(a, b, c):
+        hypotenuse = max(a, b, c)
+        if hypotenuse > a + b or hypotenuse * hypotenuse != (a * a) + (b * b):
+            return False
+        else:
+            side1 = hypotenuse ** 2 - b ** 2
+            side2 = side1 ** 0.5 if side1 > 0 else None
+            return side2 is not None and side1 == a ** 2 or side2 ** 2 == (a * a) - (hypotenuse ** 2)

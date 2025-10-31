@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def next_smallest(lst: List[int]) -> int | None:
+        if len(lst) < 2:
+            return None
+        sorted_lst = sorted(set(lst))
+        if len(sorted_lst) == 1:
+            return None
+        return sorted_lst[1]

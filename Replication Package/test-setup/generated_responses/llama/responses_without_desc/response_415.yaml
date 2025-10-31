@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def anti_shuffle(s):
+      def sort_word(word):
+        return ''.join(sorted(word))
+      
+      return ' '.join(sort_word(word) for word in s.split())

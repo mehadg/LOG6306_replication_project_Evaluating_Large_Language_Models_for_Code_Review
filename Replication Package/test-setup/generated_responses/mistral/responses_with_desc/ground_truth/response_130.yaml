@@ -1,0 +1,37 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    def minPath(grid, k):
+        n = len(grid)
+        visited = set()
+        path = []
+        def dfs(i, j, steps):
+            if steps == k and (i,j) not in visited:
+                path.append((i, j))
+                visited.add((i, j))
+                return True
+
+            if i < 0 or j < 0 or i >= n or j >= n or grid[i][j] == -1 or (i, j) in visited:
+                return False
+
+            visited.add((i, j))
+            grid[i][j] = -1
+
+            res = dfs(i + 1, j, steps + 1) or dfs(i - 1, j, steps + 1) or dfs(i, j + 1, steps + 1) or dfs(i, j - 1, steps + 1)
+            grid[i][j] = 0
+            visited.remove((i, j))
+            return res
+
+        for i in range(n):
+            for j in range(n):
+                if grid[i][j] != 0:
+                    grid[i][j] = -1
+                    if dfs(i, j, 1):
+                        break
+                    grid[i][j] = 0
+
+        path.sort()
+        return path

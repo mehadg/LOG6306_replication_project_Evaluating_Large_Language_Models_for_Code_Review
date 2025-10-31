@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    import math
+
+    def max_fill(grid, capacity):
+        total_fills = 0
+        for row in grid:
+            total_row = sum(row)
+            if total_row > 0:
+                total_fills += math.ceil(total_row / capacity)
+        return total_fills

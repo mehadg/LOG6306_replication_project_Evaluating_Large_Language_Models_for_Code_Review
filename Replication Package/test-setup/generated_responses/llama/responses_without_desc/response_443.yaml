@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def min_subarray_sum(nums):
+        if len(nums) == 0:
+            return 0
+        
+        min_sum = float("inf")
+        current_sum = 0
+        
+        for num in nums:
+            current_sum = max(0, current_sum + num)
+            min_sum = min(min_sum, current_sum)
+        
+        return min_sum

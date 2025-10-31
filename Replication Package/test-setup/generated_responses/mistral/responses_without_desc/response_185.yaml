@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def find_closest_elements(numbers: List[float]):
+        numbers.sort()
+        min_diff, closest_a, closest_b = float('inf'), numbers[0], numbers[1]
+        for i in range(1, len(numbers)):
+            diff = abs(numbers[i] - numbers[i-1])
+            if diff < min_diff:
+                min_diff = diff
+                closest_a, closest_b = numbers[i-1], numbers[i]
+        return closest_a, closest_b

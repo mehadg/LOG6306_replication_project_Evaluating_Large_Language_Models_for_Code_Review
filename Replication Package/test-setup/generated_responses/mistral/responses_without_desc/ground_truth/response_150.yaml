@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sorted_list_sum(lst):
+        lst.sort()
+        new_lst = [i for i in lst if len(i)%2 == 0]
+        return sum(new_lst)

@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fib(n: int):
+        if n < 0:
+            raise ValueError("Input must be a non-negative integer")
+        cache = [0, 1]
+        if n > 1:
+            for _ in range(2, n+1):
+                cache.append(cache[-1] + cache[-2])
+            return cache[n]
+        return cache[n]

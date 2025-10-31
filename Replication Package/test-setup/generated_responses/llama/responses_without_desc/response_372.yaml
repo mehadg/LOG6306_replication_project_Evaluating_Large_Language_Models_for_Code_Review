@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def pairs_sum_to_zero(l: List[int]) -> bool:
+        return any(abs(x) + abs(y) == 0 for x in l for y in set(l))

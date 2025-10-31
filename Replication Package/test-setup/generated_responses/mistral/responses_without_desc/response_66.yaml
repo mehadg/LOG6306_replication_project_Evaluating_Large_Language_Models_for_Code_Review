@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def circular_shift(x, shift):
+        if isinstance(x, str):
+            x = list(reversed(x))
+        elif not isinstance(x, list):
+            raise TypeError("Argument 'x' must be a string or list")
+
+        length = len(x)
+        if shift > length:
+            return x[::-1]
+        elif shift < 0:
+            shift += length
+        result = x[-shift:] + x[:-shift]
+        if isinstance(x, str):
+            return ''.join(result)
+        else:
+            return result

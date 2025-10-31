@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sum_product(numbers: List[int]):
+        product = 1
+        sum_result = sum(numbers) if numbers else 0
+        return (sum_result, product)

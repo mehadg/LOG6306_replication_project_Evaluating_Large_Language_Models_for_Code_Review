@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def find_closest_elements(numbers):
+        numbers = sorted(numbers)
+        closest_a, closest_b = numbers[1], numbers[2]
+        min_diff = abs(numbers[1] - numbers[2])
+        for i in range(2, len(numbers)-1):
+            diff = abs(numbers[i] - numbers[i+1])
+            if diff < min_diff:
+                min_diff = diff
+                closest_a, closest_b = numbers[i], numbers[i+1]
+        return closest_a, closest_b

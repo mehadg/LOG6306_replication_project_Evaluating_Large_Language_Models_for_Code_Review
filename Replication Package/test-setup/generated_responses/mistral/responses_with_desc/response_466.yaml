@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare_one(a, b):
+        a = float(a.replace(",", ".")) if isinstance(a, str) else a
+        b = float(b.replace(",", ".")) if isinstance(b, str) else b
+
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            if a == b:
+                return None
+            elif a > b:
+                return a
+            else:
+                return b
+        else:
+            return max(a, b) if a != b else None

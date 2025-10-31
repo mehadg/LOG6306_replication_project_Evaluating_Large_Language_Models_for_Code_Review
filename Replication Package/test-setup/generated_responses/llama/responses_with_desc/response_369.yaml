@@ -1,0 +1,15 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def triples_sum_to_zero(l: List[int]) -> bool:
+        for i in range(len(l)):
+            for j in range(i + 1, len(l)):
+                if l[i] + l[j] in l:
+                    return True
+        return False

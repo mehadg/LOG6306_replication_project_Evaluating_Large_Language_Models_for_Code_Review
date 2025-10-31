@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fib4(n):
+        if n <= 3:
+            return n * (n - 1) // 2
+        elif n == 4:
+            return 2
+        else:
+            a, b = [0] * (n - 1), [0] * (n - 1)
+            a[0], a[1], a[2], a[3] = 0, 0, 2, 0
+            for i in range(4, n + 1):
+                a[i] = a[i - 1] + a[i - 2] + a[i - 3] + a[i - 4]
+            return a[-1]

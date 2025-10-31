@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def numerical_letter_grade(grades):
+        letter_grades = []
+        for grade in grades:
+            if grade >= 4.0:
+                letter_grades.append('A+')
+            elif grade >= 3.7:
+                letter_grades.append('A')
+            elif grade >= 3.3:
+                letter_grades.append('A-')
+            # ... (continued from the original code)
+            elif grade < 0.0:
+                letter_grades.append('E')
+        return letter_grades

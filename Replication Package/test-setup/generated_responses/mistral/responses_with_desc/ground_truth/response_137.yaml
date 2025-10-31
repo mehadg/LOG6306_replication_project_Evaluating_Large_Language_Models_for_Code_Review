@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_smallest_integers(lst):
+        smallest = min(filter(lambda x: x < 0, lst), default=None)
+        largest = max(filter(lambda x: x > 0, lst), default=None)
+        return (largest, smallest)

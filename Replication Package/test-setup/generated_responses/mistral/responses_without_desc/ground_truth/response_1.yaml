@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def has_close_elements(numbers: List[float], threshold: float) -> bool:
+        for i, num1 in enumerate(numbers):
+            for j, num2 in enumerate(numbers[i+1:]):  # Iterate over the remaining numbers only after the current one
+                if abs(num1 - num2) < threshold:
+                    return True
+
+        return False

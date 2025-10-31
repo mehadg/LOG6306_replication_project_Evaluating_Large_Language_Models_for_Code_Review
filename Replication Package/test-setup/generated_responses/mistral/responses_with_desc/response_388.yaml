@@ -1,0 +1,22 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_prime_factor(n: int):
+        # Divide by 2 as many times as possible
+        while n % 2 == 0:
+            n = n // 2
+
+        # n is now odd
+        largest_factor = n
+
+        # Divide by the next odd numbers (3, 5, 7, etc.)
+        factor = 3
+        while n > 1 and n % factor != 0:
+            factor += 2
+
+        if n > 1:
+            largest_factor = n
+
+        return largest_factor

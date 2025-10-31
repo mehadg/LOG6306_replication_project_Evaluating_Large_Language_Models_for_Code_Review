@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def make_a_pile(n):
+        return [i + (n if i == 0 else 2*i) for i in range(n)]

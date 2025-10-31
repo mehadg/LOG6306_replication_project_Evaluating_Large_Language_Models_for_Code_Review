@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def smallest_change(arr: List[int]):
+        n = len(arr)
+        if n % 2 == 0:
+            left, right = arr[:n//2], arr[n//2:]
+        else:
+            left, right = arr[:n//2], arr[n//2+1:]
+        count = sum(abs(a - b) for a, b in zip(left, right[::-1]))
+        return count

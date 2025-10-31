@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def circular_shift(x, shift):
+        if isinstance(x, str):
+            s = x
+        elif isinstance(x, list):
+            s = ''.join([str(element) for element in x])
+        else:
+            raise ValueError("Input must be a string or a list of integers.")
+
+        if shift > len(s):
+            return s[::-1]
+        elif shift < 0:
+            return circular_shift(s, abs(shift) % len(s)) + s[:abs(shift)]
+        else:
+            return s[len(s) - shift:] + s[:len(s) - shift]

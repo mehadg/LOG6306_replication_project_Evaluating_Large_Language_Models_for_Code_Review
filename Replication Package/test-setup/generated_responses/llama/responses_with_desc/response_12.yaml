@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def string_xor(a: str, b: str) -> str:
+        result = ''.join('1' if x != y else '0' for x, y in zip(a, b))
+        return result

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def solve(s):
+      if any(not c.isalpha() for c in s):
+        return ''.join(c.swapcase() if c.isalpha() else c for c in s)
+      else:
+        return s[::-1]

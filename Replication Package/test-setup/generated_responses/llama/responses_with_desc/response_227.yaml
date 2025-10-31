@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def derivative(xs: List):
+        result = []
+        for i, x in enumerate(xs):
+            if i > 0:
+                result.append(i * xs[i-1])
+        return result

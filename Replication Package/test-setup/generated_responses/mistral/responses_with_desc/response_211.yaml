@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fib4(n):
+        if n <= 3:
+            return 0
+        elif n == 4:
+            return 2
+        a, b, c = 0, 2, 0
+        for i in range(5, n + 1):
+            d = a + b + c
+            a, b, c = b, c, d
+        return c

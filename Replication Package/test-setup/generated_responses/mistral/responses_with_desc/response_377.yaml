@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_palindrome(text: str):
+        return len(text) <= 1 or text[0] == text[-1] and is_palindrome(text[1:-1]) if len(text) > 1 else True

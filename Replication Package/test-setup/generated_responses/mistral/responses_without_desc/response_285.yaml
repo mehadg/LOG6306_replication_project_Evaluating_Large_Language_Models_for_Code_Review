@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def maximum(arr: List[int], k: int):
+        arr = sorted(arr, reverse=True)
+        return arr[:k]

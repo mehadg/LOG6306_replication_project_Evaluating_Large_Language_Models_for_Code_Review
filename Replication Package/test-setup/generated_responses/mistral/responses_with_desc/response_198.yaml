@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_third(l: list):
+        return l[:] if len(l) % 3 == 0 else l[:len(l)-1] + sorted(l[len(l)-2:])

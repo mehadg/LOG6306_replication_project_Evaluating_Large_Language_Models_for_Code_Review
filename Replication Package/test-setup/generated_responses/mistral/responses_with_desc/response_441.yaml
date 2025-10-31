@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def reverse_delete(s, c):
+        new_s = ''.join([i for i in s if i not in c])
+        palindrome = new_s == new_s[::-1]
+        return new_s, palindrome

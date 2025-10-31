@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def count_nums(arr: List[int]):
+        def digits_sum(n):
+            if n < 0:
+                n = -1 * n
+                n = list(str(abs(n)))
+                n[0] *= (1 if n[0] not in ['-', '+'] else -1)
+            return sum(n)
+        return len(list(filter(lambda x: x > 0, [digits_sum(i) for i in arr])))

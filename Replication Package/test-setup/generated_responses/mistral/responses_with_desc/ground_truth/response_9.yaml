@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sum_product(numbers: List[int]):
+        total = sum(numbers) if numbers else 0
+        product = reduce((lambda x, y: x * y), numbers) if numbers else 1
+        return total, product

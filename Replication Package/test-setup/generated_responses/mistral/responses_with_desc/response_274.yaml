@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def move_one_ball(arr):
+        if not arr:
+            return True
+
+        for i in range(len(arr)):
+            temp = arr[:i] + arr[i:]
+            temp.sort()
+            if temp == arr:
+                return True
+        return False

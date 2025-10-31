@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def cycpattern_check(a: List[str], b: str) -> bool:
+        pat = b + b
+        for i in range(len(a) - len(b) + 1):
+            if a[i:i+len(b)] == pat[::len(b)-i]:
+                return True
+        return False

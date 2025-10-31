@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare_one(a, b):
+        if isinstance(a, str) or isinstance(b, str):
+            a = float(a.replace(',', '.')) if isinstance(a, str) else a
+            b = float(b.replace(',', '.')) if isinstance(b, str) else b
+        return (None if a == b else (a if a > b else b))

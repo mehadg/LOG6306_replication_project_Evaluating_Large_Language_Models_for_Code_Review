@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sorted_list_sum(lst):
+      lst = sorted([word for word in set(lst) if len(word) % 2 == 0], key=lambda x: (len(x), x))
+      return [x for x in lst]

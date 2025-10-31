@@ -1,0 +1,11 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def will_it_fly(q: List[int], w: int) -> bool:
+        return q == list(reversed(q)) and sum(q) <= w

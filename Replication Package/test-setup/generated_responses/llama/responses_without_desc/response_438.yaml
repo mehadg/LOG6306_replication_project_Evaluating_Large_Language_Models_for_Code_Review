@@ -1,0 +1,16 @@
+Here is my feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def move_one_ball(arr: List[int]) -> bool:
+        if len(arr) == 0:
+            return True
+        for i in range(len(arr)):
+            if arr[:i] + sorted(arr[i:]) == list(arr):
+                return True
+        return False

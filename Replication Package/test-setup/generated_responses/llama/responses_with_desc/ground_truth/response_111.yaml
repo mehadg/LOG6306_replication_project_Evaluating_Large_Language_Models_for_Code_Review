@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def exchange(lst1, lst2):
+        return "YES" if sum(1 for x in lst1 if x % 2 == 0) >= len([x for x in lst1 if x % 2 != 0]) else "NO"

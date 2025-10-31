@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def sorted_list_sum(lst):
+        return sum(sorted(i) for i in [i for i in set(tuple(i) for i in lst)])

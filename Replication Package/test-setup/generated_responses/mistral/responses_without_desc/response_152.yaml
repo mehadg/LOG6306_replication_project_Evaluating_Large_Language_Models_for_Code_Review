@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List, Optional
+
+    def double_the_difference(lst: Optional[List[int]] = None) -> int:
+        result = sum((abs(n1 - n2))**2 for n1, n2 in zip(lst, lst[1:] if lst else [0])) if lst else 0
+        return result if all(isinstance(i, int) and i > 0 and i % 2 != 0 for i in lst) else None

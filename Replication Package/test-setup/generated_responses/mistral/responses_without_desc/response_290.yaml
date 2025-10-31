@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def split_words(txt: str) -> List[str]:
+        if txt:
+            words = re.findall(r'\w+', txt)
+            return [word.lower() for word in words if word.isalpha()]
+        else:
+            return []

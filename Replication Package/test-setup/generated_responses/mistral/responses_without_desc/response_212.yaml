@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def median(l: List[int]):
+        l = sorted(l)
+        n = len(l)
+        if n % 2 == 1:
+            return l[(n - 1) // 2]
+        else:
+            return (l[n // 2 - 1] + l[n // 2]) / 2

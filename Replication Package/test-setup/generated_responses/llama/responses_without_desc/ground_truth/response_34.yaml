@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def sort_third(l: List) -> List:
+        return [x if i % 3 != 0 else sorted([x for x in l[i//3]])[i%3//3] for i, x in enumerate(l)]

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_third(l: List[int]) -> List[int]:
+        l_prime = l[:]
+        for i in range(2, len(l), 3):
+            l_prime[i:i+3] = sorted(l[i:i+3])
+        return l_prime

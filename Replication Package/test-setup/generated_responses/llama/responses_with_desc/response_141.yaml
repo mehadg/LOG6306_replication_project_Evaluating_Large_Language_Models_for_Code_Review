@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    import re
+    
+    def fix_spaces(text):
+      text = re.sub(r" {2,}", "-", text)
+      text = re.sub(" ", "_", text)
+      return text

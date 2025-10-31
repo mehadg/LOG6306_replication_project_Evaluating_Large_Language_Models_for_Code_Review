@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def prod_signs(arr):
+        if not arr:
+            return None
+        product = 1
+        for i in arr:
+            product *= (i if i >= 0 else -1)
+        return abs(sum(arr)) * product

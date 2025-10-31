@@ -1,0 +1,10 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encode(message):
+      message = ''.join(c.upper() if c.islower() else c.lower() for c in message)
+      return ''.join(chr((ord(c) - 65 + 2) % 26 + 65) if c.isalpha() and c.upper() in 'AEIOU' else c for c in message)

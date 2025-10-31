@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, n):
+        s = s.lower()
+        fruits = s.split(' and ')
+        apples = int(fruits[0].split(' ')[-1])
+        oranges = int(fruits[-1].replace(' oranges', ''))
+        mangoes = n - apples - oranges
+        return mangoes

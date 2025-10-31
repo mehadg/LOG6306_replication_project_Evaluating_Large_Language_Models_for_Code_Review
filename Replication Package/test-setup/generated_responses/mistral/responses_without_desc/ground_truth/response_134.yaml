@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sum_squares(lst):
+        squared = 0
+        for i in lst:
+            squared += i**2
+        return squared

@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sorted_list_sum(lst: List[str]):
+        lst = [word for word in lst if len(word) % 2 == 0]
+        return sum(sorted(lst))

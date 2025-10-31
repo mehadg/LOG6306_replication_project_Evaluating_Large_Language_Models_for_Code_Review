@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def select_words(s, n):
+        result = []
+        words = s.split()
+        for word in words:
+            if sum(1 for c in word if c.lower() not in ["a","e","i","o","u"]) == n:
+                result.append(word)
+        return result

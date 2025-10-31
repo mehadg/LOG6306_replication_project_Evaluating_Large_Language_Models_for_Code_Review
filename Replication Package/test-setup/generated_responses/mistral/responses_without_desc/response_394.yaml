@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def circular_shift(x, shift):
+        x = str(x)
+        if shift > len(x):
+            return x[::-1]
+        if isinstance(shift, int) and shift < len(x):
+            return x[-shift:] + x[:-shift]
+        else:
+            raise ValueError("shift must be an integer greater than -len(x) and less than len(x), or equal to 0.")

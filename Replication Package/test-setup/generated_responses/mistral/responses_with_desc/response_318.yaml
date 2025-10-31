@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def Strongest_Extension(class_name, extensions):
+        extension_strength = sorted([(ext, sum(c.isupper() for c in ext)-sum(c.islower() for c in ext)) for ext in extensions], reverse=True)
+        return f"{class_name}.{extension_strength[0][0]}"

@@ -1,0 +1,25 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encode(message):
+      def transform(c):
+        if c.isalpha():
+          if c.islower():
+            c = c.upper()
+          else:
+            c = c.lower()
+          if c in 'AEIOUaeiou':
+            if c == 'A' or c == 'a':
+              return 'C'
+            elif c == 'E' or c == 'e':
+              return 'G'
+            elif c == 'I' or c == 'i':
+              return 'K'
+            elif c == 'O' or c == 'o':
+              return 'Q'
+            elif c == 'U' or c == 'u':
+              return 'S'
+        return c
+      return ''.join(transform(c) for c in message)

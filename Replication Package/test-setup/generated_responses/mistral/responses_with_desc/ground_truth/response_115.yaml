@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def minSubArraySum(nums: List[int]):
+        max_sum = float('inf')
+        current_sum = 0
+        for num in nums:
+            current_sum += num
+            if current_sum < 0:
+                current_sum = 0
+            max_sum = min(max_sum, current_sum)
+        return max_sum or (-1 * min(nums))

@@ -1,0 +1,19 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_prime_factor(n: int):
+        if n < 2:
+            return None
+        largest_factor = 1
+        i = 3
+        while i * i <= n:
+            if n % i:
+                i += 2
+            else:
+                n //= i
+                while n % i == 0:
+                    n //= i
+                largest_factor = i
+        return largest_factor

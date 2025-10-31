@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def next_smallest(lst: List) -> any:
+        lst = sorted(set(lst))
+        return lst[0] if len(lst) == 1 else lst[1]

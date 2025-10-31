@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_equal_to_sum_even(n):
+        if n % 2 != 0:
+            return False
+        for i in range(2, (n+1)//2):
+            if i % 2 == 0:
+                total = 0
+                for j in range(i, (n+1)//2 + 1):
+                    if j % 2 == 0:
+                        total += j
+                        if total == n:
+                            return True
+        return False

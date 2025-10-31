@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def minSubArraySum(nums):
+      if not nums:
+        return 0
+      min_sum = float("inf")
+      current_sum = 0
+      for num in nums:
+          current_sum = min(current_sum + num, 0)
+          min_sum = min(min_sum, current_sum)
+      return max(0, min_sum)

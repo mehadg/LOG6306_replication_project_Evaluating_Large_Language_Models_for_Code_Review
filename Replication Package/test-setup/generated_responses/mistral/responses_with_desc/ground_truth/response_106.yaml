@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def by_length(arr):
+        numbers = {i: f"{i+1}" for i in range(9)}
+        sorted_arr = sorted([n for n in arr if 0 < n <= 9], reverse=True)
+        new_arr = [numbers.get(n, '') for n in sorted_arr]
+        return new_arr

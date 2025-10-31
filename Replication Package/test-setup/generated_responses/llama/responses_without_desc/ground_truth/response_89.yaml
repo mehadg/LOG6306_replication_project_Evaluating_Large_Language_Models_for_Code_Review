@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+    
+    def sort_array(array: List) -> List:
+        if len(array) == 0:
+            return []
+        sorted_array = sorted(array)
+        if (sorted_array[0] + sorted_array[-1]) % 2 == 0:
+            return sorted_array[::-1]
+        return sorted_array

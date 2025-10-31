@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def factorize(n: int) -> List[int]:
+        import math
+        fact = []
+        i = 2
+        while i <= int(math.sqrt(n) + 1):
+            if n % i == 0:
+                count = 0
+                while n % i == 0:
+                    n //= i
+                    count += 1
+                fact.append(i) * count
+            else:
+                i += 1
+        if n > 1:
+            fact.append(n)
+        return list(set(fact))

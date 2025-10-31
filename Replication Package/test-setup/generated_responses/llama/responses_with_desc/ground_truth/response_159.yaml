@@ -1,0 +1,18 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def find_max(words):
+      if not words:
+        return None
+      max_unique_chars = 0
+      result = None
+      for word in words:
+        unique_chars = len(set(word))
+        if unique_chars > max_unique_chars:
+          max_unique_chars = unique_chars
+          result = word
+      return min([word for word in words if len(set(word)) == max_unique_chars])

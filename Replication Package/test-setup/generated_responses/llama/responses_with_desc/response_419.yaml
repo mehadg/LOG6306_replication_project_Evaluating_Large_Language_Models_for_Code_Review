@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def next_smallest(lst):
+      if len(set(lst)) < 2:
+        return None
+      else:
+        sorted_list = sorted(set(lst))
+        return sorted_list[1]

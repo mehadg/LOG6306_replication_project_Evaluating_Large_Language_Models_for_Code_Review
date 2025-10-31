@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def check_if_last_char_is_a_letter(txt):
+        words = txt.split(' ')
+        last_word = words[-1]
+        return True if len(last_word) == 1 and (97 <= ord(last_word.lower()) <= 122) else False

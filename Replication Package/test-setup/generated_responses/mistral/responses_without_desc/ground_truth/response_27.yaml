@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    import collections
+
+    def remove_duplicates(numbers: List[int]):
+        c = collections.Counter(numbers)
+        return list(filter(lambda n: c[n] <= 1, numbers))

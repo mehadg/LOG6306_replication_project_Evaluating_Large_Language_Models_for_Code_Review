@@ -1,0 +1,22 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def starts_one_ends(n):
+        total = 0
+        nine_powers = [1, 9, 81, 729, 6561] # powers of 9 up to n-2 (since we use n-1 as a multiplier)
+        if n == 1: return 1
+        elif n > 4:
+            for power in nine_powers[len(nine_powers)-2:]:
+                total += power * 10 + 1
+        else:
+            # handle the case where n is between 2 and 4 explicitly
+            if n == 2:
+                total = 9
+            elif n == 3:
+                total = 81 + 90
+            return total
+        return (18 * nine_powers[n - 2]) + total

@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def histogram(test):
+        test = list(set(test)) # Remove duplicates to avoid counting them twice
+        count = collections.Counter(test)
+        max_count = max(count.values())
+        max_letters = {k: v for k, v in count.items() if v == max_count}
+        return max_letters

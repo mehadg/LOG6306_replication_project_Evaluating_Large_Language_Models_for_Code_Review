@@ -1,0 +1,20 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def rolling_max(numbers: List[int]):
+        max_so_far = None
+        result = []
+
+        for n in numbers:
+            if max_so_far is None:
+                max_so_far = n
+            else:
+                max_so_far = max(max_so_far, n)
+
+            result.append(max_so_far)
+
+        return result

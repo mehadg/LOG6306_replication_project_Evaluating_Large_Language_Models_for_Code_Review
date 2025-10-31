@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def check_dict_case(dictionary):
+        if not dictionary:
+            return False
+        lower = all(k.islower() for k in dictionary.keys())
+        upper = all(k.isupper() for k in dictionary.keys())
+        return lower or upper

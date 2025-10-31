@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def car_race_collision(n: int):
+        left_cars = [(i, 0) for i in range(n)]  
+        right_cars = [(i, n-1) for i in range(n)] 
+        collisions = 0  
+        for t in range(n): 
+            left_cars = [(i, p + 1) for i, p in left_cars]
+            right_cars = [(i, q - 1) for i, q in right_cars]
+            for i, p in left_cars:
+                for j, q in right_cars:
+                    if p == q:  
+                        collisions += 1  
+        return collisions

@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import Dict
+
+    def check_dict_case(dict_: Dict]:
+        if not dict_:
+            return False
+        lower = all(key.islower() for key in dict_.keys())
+        upper = all(key.isupper() for key in dict_.keys())
+        return lower or upper

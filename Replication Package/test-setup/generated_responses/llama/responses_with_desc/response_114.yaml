@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def odd_count(lst):
+      output = []
+      for i, s in enumerate(lst):
+        odd_num = sum(1 for c in s if int(c) % 2 == 1)
+        output.append(f"the number of odd elements {odd_num}n the str{odd_num}ng {i+1} of the input.")
+      return output

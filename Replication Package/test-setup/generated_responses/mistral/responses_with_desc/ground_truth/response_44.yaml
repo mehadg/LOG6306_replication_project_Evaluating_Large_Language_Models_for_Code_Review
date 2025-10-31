@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def pairs_sum_to_zero(l):
+        return any(i1 + i2 == 0 for i1, i2 in zip(sorted(l), reversed(sorted(l[1:])))) if l else False

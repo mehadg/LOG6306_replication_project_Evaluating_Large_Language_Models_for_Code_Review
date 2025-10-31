@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List, Tuple
+
+    def sum_product(numbers: List[int]) -> Tuple[int, int]:
+        if not numbers:
+            return (0, 1)
+        else:
+            product = 1
+            sum_result = sum(numbers)
+            for i in numbers:
+                product *= i
+            return (product, sum_result)

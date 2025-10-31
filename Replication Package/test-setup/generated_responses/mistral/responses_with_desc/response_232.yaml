@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fruit_distribution(s, n):
+        s = s.lower()
+        fruits = list(filter(str.isalpha, s))
+        num_apples = s.count(" apples ") + s.count(" apple")
+        num_oranges = s.count(" oranges")
+        if s.count(" and mangoes") > 0:
+            num_mangoes = int(s.split(" and mangoes")[1])
+        elif s.count(" mangoes") == 1:
+            num_mangoes = int(s.split(" mangoes")[1])
+        else:
+            num_mangoes = 0
+        return n - num_apples - num_oranges - num_mangoes

@@ -1,0 +1,40 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def minPath(grid, k):
+        n = len(grid)
+        visited = [[False]*n for _ in range(n)]
+        val = float('inf')
+        for i in range(n):
+            for j in range(n):
+                if grid[i][j] == 1 and not visited[i][j]:
+                    queue = [(i, j)]
+                    visited[i][j] = True
+                    steps = 0
+                    while queue:
+                        x, y = queue.pop(0)
+                        if (x, y) == (n-1, n-1):
+                            val = min(val, steps+1)
+                            break
+                        if x > 0 and not visited[x-1][y]:
+                            visited[x-1][y] = True
+                            queue.append((x-1, y))
+                        if y > 0 and not visited[x][y-1]:
+                            visited[x][y-1] = True
+                            queue.append((x, y-1))
+                        if x < n-1 and not visited[x+1][y]:
+                            visited[x+1][y] = True
+                            queue.append((x+1, y))
+                        if y < n-1 and not visited[x][y+1]:
+                            visited[x][y+1] = True
+                            queue.append((x, y+1))
+                        steps += 1
+        ans = []
+        for i in range(k):
+            if i % 2 == 0:
+                ans.append(1)
+            else:
+                ans.append(val if val < n*n else n*n)
+        return ans

@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def x_or_y(n, x, y):
+        if n <= 1 or (2 < n and any(n % i == 0 for i in range(2, int(n**0.5) + 1))):
+            return y
+        else:
+            return x

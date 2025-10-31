@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def order_by_points(nums: List[int]):
+        def sum_digits(n: int) -> int:
+            return sum(int(d) for d in str(abs(n)))
+
+        return sorted(nums, key=lambda x: (sum_digits(x), nums.index(x)))

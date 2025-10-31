@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def encode_cyclic(s: str):
+        if not s:
+            return s
+        result = ""
+        for i, c in enumerate(s):
+            result += c
+            if i >= len(s) - 1:
+                break
+            result += s[0]
+        return result

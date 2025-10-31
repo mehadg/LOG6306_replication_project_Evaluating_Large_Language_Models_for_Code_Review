@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def closest_integer(value):
+        try:
+            value = float(value)
+        except ValueError:
+            pass
+
+        if value == math.floor(value):
+            return int(value)
+        elif value > math.floor(value):
+            return math.ceil(value)
+        else:
+            return math.floor(value)

@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def flip_case(string: str) -> str:
+      return string.swapcase()

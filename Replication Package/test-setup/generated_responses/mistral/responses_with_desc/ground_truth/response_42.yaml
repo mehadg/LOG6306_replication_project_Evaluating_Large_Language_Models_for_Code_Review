@@ -1,0 +1,21 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List
+
+    def car_race_collision(n: int):
+        left_cars = list(range(1, n + 1))
+        right_cars = list(reversed(list(range(1, n + 1))))
+
+        while left_cars or right_cars:
+            if left_cars and right_cars and left_cars[0] == right_cars[0]:
+                left_cars.pop(0)
+                right_cars.pop()
+                continue
+            elif left_cars[0] < right_cars[0]:
+                left_cars.pop(0)
+            else:
+                right_cars.pop(0)
+        return len(left_cars) + len(right_cars)

@@ -1,0 +1,64 @@
+user='''You are an experienced Python developer. You will be provided with a code block and a corresponding problem description. Your task is to understand the intended functionality, review the code, and generate feedback. Please follow these steps:
+
+1. Analyze the Code: Understand what the code is meant to do.
+2. Consider Edge Cases: Reflect on all scenarios in which the code should operate.
+3. Evaluate Functionality: Determine whether the code successfully implements the intended functionality across these cases.
+4. Classify the Code:
+   - If the code requires changes, set classified_type to "Incorrect"
+   - If the code does not require any changes, set classified_type to "Correct"
+5. Suggest a Corrected Code Block: In the complete_code field, provide the corrected Python code (or the original code if no changes needed).
+
+Important: Use only the classifications "Correct" or "Incorrect" (case sensitive).
+
+Now, please review the code based on the following code block:
+
+@@ -0,0 +1,11 @@
++def bf(planet1, planet2):
++    planet_names = ("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
++    if planet1 not in planet_names or planet2 not in planet_names or planet1 == planet2:
++        return ()
++    planet1_index = planet_names.index(planet1)
++    planet2_index = planet_names.index(planet2)
++    if planet1_index < planet2_index:
++        return (planet_names[planet1_index + 1: planet2_index])
++    else:
++        return (planet_names[planet2_index + 1 : planet1_index])
++ 
+
+And the following problem description:
+
+"There are eight planets in our solar system: the closerst to the Sun 
+    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn, 
+    Uranus, Neptune.
+    Write a function that takes two planet names as strings planet1 and planet2. 
+    The function should return a tuple containing all planets whose orbits are 
+    located between the orbit of planet1 and the orbit of planet2, sorted by 
+    the proximity to the sun. 
+    The function should return an empty tuple if planet1 or planet2
+    are not correct planet names. 
+    Examples
+    bf("Jupiter", "Neptune") ==> ("Saturn", "Uranus")
+    bf("Earth", "Mercury") ==> ("Venus")
+    bf("Mercury", "Uranus") ==> ("Venus", "Earth", "Mars", "Jupiter", "Saturn")"
+
+You MUST respond in exactly this YAML format:
+
+```yaml
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def function_name(parameters):
+        # Your Python code here (corrected or original)
+        return result
+```
+
+Apply the following rules strictly:
+- Answer should be valid YAML and nothing else
+- No additional text or explanations outside the YAML structure
+- Replace the example code with your actual corrected/original code
+- Ensure proper indentation (4 spaces for code inside complete_code)
+- Be careful about the indentation and syntax of your suggested code block, make sure it can run without problems'''

@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def monotonic(l: List[int]):
+        if all((prev >= curr) or (prev <= curr) for prev, curr in zip(l, l[1:])):
+            return True
+        return False

@@ -1,0 +1,16 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def solve(s):
+      letters = set(string.ascii_letters)
+      result = ""
+      for c in s:
+        if c in letters:
+          result += c.swapcase()
+        else:
+          result += c
+      return result if any(c.isalpha() for c in s) else s[::-1]

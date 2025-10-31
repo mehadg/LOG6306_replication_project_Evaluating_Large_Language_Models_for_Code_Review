@@ -1,0 +1,8 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def is_multiply_prime(a):
+        # Your Python code here (corrected or original)
+        return result

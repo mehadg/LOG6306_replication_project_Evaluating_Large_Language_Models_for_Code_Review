@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def greatest_common_divisor(a: int, b: int) -> int:
+        while b:
+            a, b = b, a % b
+        return a

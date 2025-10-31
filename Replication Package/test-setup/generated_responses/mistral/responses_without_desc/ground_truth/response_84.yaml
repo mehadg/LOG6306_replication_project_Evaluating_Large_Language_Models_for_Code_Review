@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def starts_one_ends(n):
+        return 1 if n == 1 else 18 * (10 ** (n - 2))

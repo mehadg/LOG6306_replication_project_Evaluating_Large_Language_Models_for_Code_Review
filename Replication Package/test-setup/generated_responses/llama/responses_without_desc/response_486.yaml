@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def right_angle_triangle(a, b, c):
+        # first find the hypotenuse of the triangle
+        sides = sorted([a, b, c])
+        if sides[2]**2 == sides[0]**2 + sides[1]**2:
+            return True
+        else:
+            return False

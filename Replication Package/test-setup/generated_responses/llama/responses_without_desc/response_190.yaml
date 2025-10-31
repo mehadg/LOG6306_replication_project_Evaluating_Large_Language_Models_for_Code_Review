@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+    
+    def factorize(n: int) -> List[int]:
+        factors = []
+        current_number = n
+        divisor = 2
+        while current_number > 1:
+            if current_number % divisor == 0:
+                factors.append(divisor)
+                current_number = current_number / divisor
+            else:
+                divisor += 1
+        return factors

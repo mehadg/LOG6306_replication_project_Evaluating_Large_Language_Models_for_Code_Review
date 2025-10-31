@@ -1,0 +1,13 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def right_angle_triangle(a, b, c):
+      side_a = min(a, b, c)
+      side_b = [x for x in (a, b, c) if x != side_a][0]
+      side_c = [x for x in (a, b, c) if x not in (side_a, side_b)][0]
+      
+      return side_a ** 2 + side_b ** 2 == side_c ** 2

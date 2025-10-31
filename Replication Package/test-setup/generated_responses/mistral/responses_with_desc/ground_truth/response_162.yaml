@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def solve(s):
+        result = list(s)
+        for i, char in enumerate(result):
+            if char.isalpha():
+                result[i] = char.swapcase()
+
+        return ''.join(result)

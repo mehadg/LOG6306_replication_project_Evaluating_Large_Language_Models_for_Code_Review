@@ -1,0 +1,9 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def monotonic(lst):
+      return (lst == list(range(min(lst), max(lst)+1))) or (lst == list(range(max(lst), min(lst)-1, -1)))

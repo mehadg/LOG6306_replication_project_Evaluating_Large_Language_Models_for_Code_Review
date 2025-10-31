@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def string_xor(a, b):
+        return ''.join(chr(ord(x)^ord(y)) for x, y in zip(a, b))

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def hex_key(num):
+        primes = '2357BD'
+        count = 0
+        for digit in num.upper():
+            if digit in primes or int(digit, 16) > 9 and (4 * (int(digit, 16)) + 1) % 6 == 0: # includes F, and checks odd numbers greater than 9
+                count += 1
+        return count

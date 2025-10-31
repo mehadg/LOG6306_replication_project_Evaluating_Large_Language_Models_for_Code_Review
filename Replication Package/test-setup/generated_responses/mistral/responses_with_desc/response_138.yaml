@@ -1,0 +1,55 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def compare_one(a, b):
+        try:
+            a = float(a.replace(",", "."))
+        except (ValueError, TypeError):
+            pass
+
+        try:
+            b = float(b.replace(",", "."))
+        except (ValueError, TypeError):
+            pass
+
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            if a == b:
+                return None
+            elif a > b:
+                return a
+            else:
+                return b
+        elif isinstance(a, str) and isinstance(b, (int, float)):
+            try:
+                c = float(a.replace(",", "."))
+                if c > b:
+                    return c
+                else:
+                    return b
+            except ValueError:
+                return a
+        elif isinstance(a, (int, float)) and isinstance(b, str):
+            try:
+                d = float(b.replace(",", "."))
+                if a > d:
+                    return a
+                else:
+                    return d
+            except ValueError:
+                return b
+        elif isinstance(a, str) and isinstance(b, str):
+            try:
+                e = float(a.replace(",", "."))
+                f = float(b.replace(",", "."))
+                if e > f:
+                    return e
+                else:
+                    return f
+            except ValueError:
+                if a > b:
+                    return a
+                else:
+                    return b
+        return None

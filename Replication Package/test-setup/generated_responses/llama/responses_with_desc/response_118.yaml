@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def select_words(s, n):
+      words = re.findall(r'\b\w+\b', s)
+      result = [word for word in words if len([c for c in word.lower() if c.isalpha() and c not in "aeiou"]) == n]
+      return result

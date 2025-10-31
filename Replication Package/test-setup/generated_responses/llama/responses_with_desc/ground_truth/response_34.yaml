@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def sort_third(l: list):
+      l = list(l)
+      sorted_third_elements = sorted([element for i, element in enumerate(l) if i % 3 == 0])
+      for i in range(len(l)):
+        if i % 3 == 0:
+          l[i] = sorted_third_elements.pop(0)
+      return l

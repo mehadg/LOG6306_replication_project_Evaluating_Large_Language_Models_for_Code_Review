@@ -1,0 +1,10 @@
+Here is my response:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def unique_digits(x):
+      odd_digit_elements = [i for i in x if all(int(d) % 2 == 1 for d in str(i))]
+      return sorted(odd_digit_elements)

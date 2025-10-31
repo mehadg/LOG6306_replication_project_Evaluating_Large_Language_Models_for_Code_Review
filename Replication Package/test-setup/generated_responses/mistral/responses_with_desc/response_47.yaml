@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fib4(n: int):
+        if n <= 3:
+            return 0
+        elif n == 4:
+            return 2
+        sequence = [0, 0, 2]
+        for _ in range(3, n):
+            sequence.append(sequence[-1] + sequence[-2] + sequence[-3])
+        return sequence[n]

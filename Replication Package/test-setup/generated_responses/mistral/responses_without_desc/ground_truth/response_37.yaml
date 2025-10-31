@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def fizz_buzz(n: int):
+        nums = []
+        for i in range(1, n+1):
+            if i % 15 == 0:
+                nums.append(i)
+        count_7 = sum([str(num).count('7') for num in nums])
+        return count_7

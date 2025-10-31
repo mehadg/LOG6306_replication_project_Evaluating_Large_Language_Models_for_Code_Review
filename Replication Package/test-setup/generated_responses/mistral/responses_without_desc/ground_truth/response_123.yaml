@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def add_elements(arr, k):
+        return sum(elem for elem in arr[:k] if str(elem).__len__() <= 2)

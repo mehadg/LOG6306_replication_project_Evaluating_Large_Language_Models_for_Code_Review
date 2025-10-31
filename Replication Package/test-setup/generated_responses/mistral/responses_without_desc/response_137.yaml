@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def largest_smallest_integers(lst):
+        negative_numbers = [x for x in lst if x < 0]
+        positive_numbers = [x for x in lst if x > 0]
+        a, b = None, None
+        if negative_numbers:
+            a = max(negative_numbers)
+        if positive_numbers:
+            b = min(positive_numbers)
+        return a, b

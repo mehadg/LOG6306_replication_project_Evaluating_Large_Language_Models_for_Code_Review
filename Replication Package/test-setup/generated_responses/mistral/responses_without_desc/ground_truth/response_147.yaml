@@ -1,0 +1,13 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def specialFilter(nums: List[int]):
+        count = 0
+        for num in nums:
+            if num > 10 and str(num)[0].isodd() and str(num)[-1].isodd():
+                count += 1
+        return count

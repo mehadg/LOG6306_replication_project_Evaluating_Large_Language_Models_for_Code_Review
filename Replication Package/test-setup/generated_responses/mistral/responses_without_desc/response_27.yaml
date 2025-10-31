@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def remove_duplicates(numbers: List[int]):
+        # create a new set to store the unique values
+        unique_numbers = set()
+
+        # iterate over the numbers in the input list and convert them to set for faster lookup
+        for number in numbers:
+            unique_numbers.add(number)
+
+        # convert the set back to list before returning
+        return list(unique_numbers)

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def largest_divisor(n: int) -> int:
+        if n < 1:
+            raise ValueError("Number must be greater than or equal to 1")
+        for i in range(n - 1, 0, -1):
+            if n % i == 0:
+                return i
+        return n

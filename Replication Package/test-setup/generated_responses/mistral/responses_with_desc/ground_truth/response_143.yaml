@@ -1,0 +1,17 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def sum_squares(lst: List[int]):
+        result = []
+        for i, num in enumerate(lst):
+            if i % 3 == 0:
+                result.append(num ** 2)
+            elif i % 4 == 0 and i % 3 != 0:
+                result.append(num ** 3)
+            else:
+                result.append(num)
+        return sum(result)

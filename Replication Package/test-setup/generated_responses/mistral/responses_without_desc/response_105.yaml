@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def unique_digits(numbers: List[int]) -> List[int]:
+        even_count = {2, 4, 6, 8}
+        result = []
+
+        for num in numbers:
+            if set(str(num)).intersection(even_count) == {}:
+                result.append(num)
+
+        return sorted(result)

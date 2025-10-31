@@ -1,0 +1,11 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    from typing import List, Optional
+
+    def car_race_collision(n: Optional[List[int]] = None) -> int:
+        if n is None or len(n) != 2:
+            raise ValueError("Input should be a list of 2 integers.")
+        return n[0] ** 2 + n[1] ** 2

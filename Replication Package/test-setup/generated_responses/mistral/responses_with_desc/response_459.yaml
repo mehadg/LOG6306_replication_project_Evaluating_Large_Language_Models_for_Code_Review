@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def tri(n):
+        tribonacci = [1, 3, 2]
+        if len(tribonacci) <= n + 1:
+            for _ in range(n - len(tribonacci) + 3):
+                if len(tribonacci) % 2 == 0:
+                    tribonacci.append(1 + (len(tribonacci) / 2))
+                else:
+                    tribonacci.append(tribonacci[-1] + tribonacci[-2] + tribonacci[-3])
+        return tribonacci[:n+1]

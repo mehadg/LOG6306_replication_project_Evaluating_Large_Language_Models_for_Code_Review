@@ -1,0 +1,18 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def file_name_check(file_name):
+      suf = ['txt', 'exe', 'dll']
+      lst = file_name.split('.')
+      if len(lst) != 2:
+        return 'No'
+      if not lst[1].lower() in suf:
+        return 'No'
+      if not lst[0][0].isalpha():
+        return 'No'
+      t = sum(c.isdigit() for c in lst[0])
+      if t > 3:
+        return 'No'
+      return 'Yes'

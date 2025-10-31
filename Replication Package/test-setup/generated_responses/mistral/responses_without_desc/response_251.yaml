@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def anti_shuffle(s):
+        from typing import List
+        def sort_word(word):
+            return ''.join(sorted(word, key=lambda x: ord(x)))
+
+        s_list = s.split()
+        sorted_words = [sort_word(word) for word in s_list]
+
+        return ' '.join(sorted_words)

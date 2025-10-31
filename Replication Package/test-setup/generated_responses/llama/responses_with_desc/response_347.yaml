@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def how_many_times(string: str, substring: str) -> int:
+        count = 0
+        while True:
+            pos = string.find(substring)
+            if pos != -1:
+                count += 1
+                string = string[pos + len(substring):]
+            else:
+                return count

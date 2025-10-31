@@ -1,0 +1,15 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def triples_sum_to_zero(numbers: List[int]):
+        seen = set()
+        for num in numbers:
+            diff = -num
+            if diff in seen:
+                return True
+            seen.add(num + diff)
+        return False

@@ -1,0 +1,12 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import StringIO
+
+    def flip_case(string: str) -> str:
+        output = StringIO()
+        for char in string:
+            output.write(char.upper() if char.islower() else char.lower())
+        return output.getvalue()

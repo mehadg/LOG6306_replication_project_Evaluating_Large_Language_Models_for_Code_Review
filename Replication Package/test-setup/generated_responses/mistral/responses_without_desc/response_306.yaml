@@ -1,0 +1,10 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def file_name_check(file_name):
+        if re.search(r"[a-zA-Z]", file_name) and re.search(r"\.[a-zA-Z]{3}|exe|dll$", file_name):
+            return 'Yes'
+        else:
+            return 'No'

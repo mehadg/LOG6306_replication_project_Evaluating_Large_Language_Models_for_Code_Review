@@ -1,0 +1,22 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def find_largest_prime_sum_of_digits(lst: List[int]):
+        def isPrime(n):
+            for i in range(2, int(n**0.5)+1):
+                if n%i==0:
+                    return False
+
+            return True
+
+        maxx = 0
+        for num in lst:
+            if(num > maxx and isPrime(num)):
+                maxx = num
+
+        result = sum(int(digit) for digit in str(maxx))
+        return result

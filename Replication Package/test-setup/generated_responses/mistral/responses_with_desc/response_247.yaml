@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def prime_length(string):
+        # Your Python code here
+        return is_prime(len(string))
+
+    def is_prime(n):
+        if n <= 1:
+            return False
+        for i in range(2, n + 1):
+            if n % i == 0:
+                return False
+        return True

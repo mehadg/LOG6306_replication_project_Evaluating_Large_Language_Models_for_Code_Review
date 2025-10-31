@@ -1,0 +1,18 @@
+Here is the feedback:
+
+feedback:
+  classified_type: | 
+    Correct
+code:
+  complete_code: |
+    import re
+    
+    def split_words(txt):
+      if ' ' in txt or ',' in txt:
+        if ' ' in txt:
+          return txt.split()
+        else:
+          return txt.split(',')
+      else:
+        count = sum(1 for x in txt if x.islower() and ord(x) % 2 != 0)
+        return count

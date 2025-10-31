@@ -1,0 +1,16 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def correct_bracketing(brackets):
+        stack = []
+        for b in brackets:
+            if b == "<":
+                stack.append(b)
+            elif b == ">":
+                while len(stack) > 0 and stack[-1] != "<":
+                    stack.pop()
+                if not stack or stack.pop() != "<":
+                    return False
+        return not stack

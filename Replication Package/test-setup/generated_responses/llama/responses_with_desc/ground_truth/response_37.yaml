@@ -1,0 +1,7 @@
+feedback:
+  classified_type: |
+    Incorrect
+code:
+  complete_code: |
+    def fizz_buzz(n: int):
+      return sum(c == '7' for s in (str(i) for i in range(n)) if any(int(s) % d == 0 for d in (11, 13)))

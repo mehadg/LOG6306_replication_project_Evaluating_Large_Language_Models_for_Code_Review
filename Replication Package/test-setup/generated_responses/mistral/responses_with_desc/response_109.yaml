@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    from typing import List
+
+    def count_nums(arr):
+        return sum(1 for num in arr if sum(abs(int(digit)) for digit in str(num)) > 0)

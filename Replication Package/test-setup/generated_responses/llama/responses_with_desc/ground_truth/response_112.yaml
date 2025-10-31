@@ -1,0 +1,12 @@
+Here is the feedback:
+
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def histogram(test):
+      from collections import Counter
+      counter = Counter(test.split())
+      max_count = max(counter.values())
+      return {k: v for k, v in counter.items() if v == max_count}

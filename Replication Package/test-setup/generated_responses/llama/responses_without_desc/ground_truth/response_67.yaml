@@ -1,0 +1,9 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def digit_sum(s):
+        if s == "":
+            return 0
+        return sum(ord(char) for char in s)

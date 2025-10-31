@@ -1,0 +1,14 @@
+feedback:
+  classified_type: |
+    Correct
+code:
+  complete_code: |
+    def encrypt(s):
+        d = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/ '
+        out = ''
+        for c in s:
+            if c in d:
+                out += d[(d.index(c)+2*2) % 26 + len(d)//2]
+            else:
+                out += c
+        return out.replace('+','@').replace('/','%')
